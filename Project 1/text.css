@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+}
+body {
+  height: 325vh;
+  width: 100%;
+  background-color: #f4f4f4;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-color: black;
+}
+.header-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+.text {
+  color: #303030;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+.div-image {
+  display: flex;
+  align-items: center;
+  height: 23%;
+}
+.image {
+  height: 70%;
+  width: 15%;
+  margin-left: 8%;
+}
+span {
+  color: green;
+}
+.tours {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 100%;
+}
+.p-title-div {
+  height: 18%;
+  width: 45%;
+  box-sizing: content-box;
+}
+.tt {
+  color: #1ac74a;
+  font-family: Nico Moji;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.Destination {
+  display: inline-block;
+  color: #303030;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.main-image {
+  height: 90%;
+  width: 40%;
+  background-color: white;
+  margin-top: 5%;
+}
+.main-div {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 15%;
+  height: 30%;
+  width: 70%;
+}
+.days {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 4%;
+  height: 10%;
+  width: 50%;
+  border: 1px solid black;
+  border-radius: 15px;
+  transition: all 0.2s ease-in-out;
+}
+.days:hover {
+  background-color: black;
+  color: white;
+}
+.tours .days:nth-child(1):hover ~ .main-image .chng-img:nth-child(1) {
+  display: block;
+}
+.chng-img {
+  display: none;
+}
+.gazar {
+  color: black;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.ded-gazar {
+  color: gray;
+  text-align: right;
+}
+.pricing {
+  flex-wrap: wrap;
+}
+.y {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+.text-pricing {
+  display: flex;
+  justify-content: center;
+  color: #1ac74a;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.l-text {
+  color: #303030;
+  text-align: center;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5%;
+  width: 50%;
+  height: 15%;
+  margin-left: 25%;
+  column-gap: 5%;
+}
+.small-contai {
+  height: 90%;
+  width: 50%;
+  background-color: white;
+}
+.luxury {
+  text-align: center;
+}
+li {
+  color: #777;
+  margin-top: 10%;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.dollar {
+  color: #303030;
+  text-align: left;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 15%;
+  margin-left: 5%;
+}
+.dollar-bill {
+  color: #303030;
+  text-align: left;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 2%;
+  margin-left: 5%;
+}
+.last {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 5%;
+  background-color: black;
+  color: white;
+  font-size: 200%;
+}
+.last-big {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 7%;
+  background-color: black;
+  border-top: 1px solid green;
+}
+.fb-insta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40%;
+  width: 80%;
+}
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  color: white;
+  height: 25%;
+  width: 10%;
+  margin-top: 1%;
+  border-radius: 10px;
+}
+.last-pine {
+  color: white;
+  font-size: 200%;
+}
+.fbb {
+  border-radius: 4px;
+  background: #303030;
+  width: 40%;
+  height: 80%;
+}
+.small-contai:hover {
+  border: 3px solid green;
+  border-radius: 4px;
+}
+.inscon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 4%;
+  width: 30%;
+  height: 50%;
+}
