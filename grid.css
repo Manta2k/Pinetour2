@@ -1,6 +1,14 @@
 * {
   margin: 0;
 }
+@media only screen and (max-width: 991px) {
+  .container {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
 .container {
   display: grid;
   grid-template-rows: repeat(4, 30% 29% 29% 15%);
@@ -25,10 +33,16 @@
 }
 .box:nth-child(3) {
   background-color: #f05638;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .box:nth-child(4) {
+  display: flex;
+  justify-content: space-around;
   grid-column: 2/4;
   background-color: white;
+  padding: 70px 50px 0 50px;
 }
 .box:nth-child(5) {
   display: flex;
@@ -94,6 +108,9 @@
   font-weight: 400;
   margin-top: 4%;
 }
+.text-c {
+  text-align: center;
+}
 
 /*box-2 css*/
 .p-header {
@@ -104,7 +121,6 @@
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  text-align: center;
 }
 .box-2-h1 {
   font-family: sans-serif;
@@ -121,6 +137,51 @@ a {
   text-align: center;
 }
 /*box-3 css*/
+.arrow-link {
+  color: yellow;
+  letter-spacing: 3px;
+}
+/*box-4 css*/
+.mini-box1 {
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-start;
+  width: 20%;
+  position: relative;
+}
+.mini-box2 {
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-start;
+  width: 45%;
+}
+
+.long-text {
+  color: #9fa3a7;
+  font-size: 16px;
+  line-height: 30px;
+}
+.mg-bot-100 {
+  margin-bottom: 100px;
+}
+.box-4-img {
+  position: absolute;
+  left: -250%;
+  bottom: -19%;
+  scale: 0.5;
+}
+.downl {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #27b9c2;
+  cursor: pointer;
+}
+/*box-5 css*/
 .tug {
   padding: 2px 13px 1px 30px;
   color: white;
@@ -217,8 +278,6 @@ button {
   font-size: 22px;
   line-height: 32px;
   text-align: center;
-}
-.box-7-img {
 }
 /*box-8 css*/
 .box-8-img {
