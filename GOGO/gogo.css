@@ -15,16 +15,18 @@ body {
   align-items: center;
   flex-direction: column;
   height: 350vh;
-  padding: 0 12%;
+}
+.main {
+  background: linear-gradient(180deg, #fff, #ece9e9);
 }
 .first-container {
+  width: 60%;
   display: grid;
   grid-template-columns: repeat(4, 25%);
-  grid-template-rows: 65% 35%;
-  background: linear-gradient(180deg, #fff, #f7f7f7);
-  gap: 25px 15px;
-  height: 600px;
-  width: 100%;
+  grid-template-rows: 53% 23% 18%;
+  gap: 15px 15px;
+  height: 700px;
+  margin: 0 260px 0 260px;
 }
 .box1 {
   grid-column: 1/3;
@@ -39,7 +41,7 @@ body {
   transition: all 0.5s ease-out;
 }
 .box2:hover {
-  transform: scale3d(1.1);
+  scale: 1.1;
 }
 .box3 {
   grid-column: 1/2;
@@ -47,7 +49,17 @@ body {
   background-repeat: no-repeat;
   background-image: url(https://mgl.gogo.mn/newsn/thumbnail/600/images/c/2023/11/313071-21112023-1700527717-1170791623-338Q79Q-preview.jpg);
   background-size: 100%;
-  height: 350px;
+  transition: all 0.5s ease-out;
+  box-sizing: content-box;
+}
+.box3:hover {
+  scale: 1.1;
+}
+.box3-comment {
+  grid-column: 1/2;
+  grid-row: 3/4;
+
+  padding-left: 13px;
 }
 .box4 {
   grid-column: 2/3;
@@ -55,7 +67,15 @@ body {
   background-repeat: no-repeat;
   background-image: url(https://mgl.gogo.mn/newsn/thumbnail/600/images/c/2023/11/-21112023-1700538860-99217285-1.jpg);
   background-size: 100%;
-  height: 350px;
+  transition: all 0.5s ease-out;
+}
+.box4:hover {
+  scale: 1.1;
+}
+.box4-comment {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  padding-left: 13px;
 }
 .box5 {
   grid-column: 3/4;
@@ -63,15 +83,23 @@ body {
   background-repeat: no-repeat;
   background-image: url(https://mgl.gogo.mn/newsn/thumbnail/600/thumbnail/1000/images/c/2022/12/300846-06122022-1670294137-1352769580-hurelsuh1.jpeg);
   background-size: 100%;
-  height: 350px;
+  transition: all 0.5s ease-out;
+}
+.box5:hover {
+  scale: 1.1;
+}
+.box5-comment {
+  grid-column: 3/4;
+  grid-row: 3/4;
+
+  padding-left: 13px;
 }
 .box6 {
   grid-column: 4/5;
-  grid-row: 2/3;
+  grid-row: 2/4;
   background-repeat: no-repeat;
   background-image: url(https://mgl.gogo.mn/banner_gogo/banner/2023/11/15/news-b2/videourl/1700019680/haan%20banner.jpg);
   background-size: 100%;
-  height: 300px;
 }
 .ulaantseg {
   border-radius: 100%;
@@ -131,6 +159,9 @@ body {
 .j-content-c {
   justify-content: center;
 }
+.j-content-fstart {
+  justify-content: flex-start;
+}
 .a-items-c {
   align-items: center;
 }
@@ -148,6 +179,12 @@ body {
 }
 .flex-wrap-on {
   flex-wrap: wrap;
+}
+.font-size-26px {
+  font-size: 26px;
+}
+.font-size-30px {
+  font-size: 30px;
 }
 .font-size-18px {
   font-size: 18px;
@@ -182,8 +219,8 @@ body {
 .mg-top-30px {
   margin-top: 30px;
 }
-.mg-top-80px {
-  margin-top: 80px;
+.mg-top-150px {
+  margin-top: 150px;
 }
 .line-h-40px {
   line-height: 40px;
@@ -194,10 +231,15 @@ body {
 .text-green {
   color: #2adb00;
 }
+.t-align-c {
+  text-align: center;
+}
+.t-align-l {
+  text-align: left;
+}
+
 .opacity-2 {
   opacity: 0.2;
-}
-.header {
 }
 h4 {
   font-size: 18px;
@@ -206,6 +248,9 @@ h4 {
 }
 .scale-5 {
   scale: 0.5;
+}
+.scale-6 {
+  scale: 0.6;
 }
 .scale-8 {
   scale: 0.8;
