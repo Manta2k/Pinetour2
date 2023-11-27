@@ -4,62 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      /* Hide the checkboxes */
-      .image-toggle {
-        display: none;
-      }
-      /* Initially hide the Altai 5 image */
-      .altai-image {
-        display: none;
-      }
-      /* Show Altai 5 image when checkbox is checked */
-      .altai-toggle:hover ~ .altai-image {
-        display: block;
-      }
-      /* Hide Sukhbaatar image when Altai 5 checkbox is hover */
-      .altai-toggle:hover ~ .sukhbaatar-image {
-        display: none;
-      }
-      /* Show Sukhbaatar image when checkbox is hover */
-      .sukhbaatar-toggle:hover ~ .sukhbaatar-image {
-        display: block;
-      }
-      /* Hide Altai 5 image when Sukhbaatar checkbox is hover */
-      .sukhbaatar-toggle:hover ~ .altai-image {
-        display: none;
-      }
-      /* Styling for text labels */
-      .container {
-        cursor: pointer;
-      }
-    </style>
-    <!-- Adjacent -->
+    <link rel="stylesheet" href="onclass.css" />
+    <script src="onclass.js"></script>
   </head>
-  <body>
-    <div style="display: flex; flex-direction: column">
-      <label for="sukhbaatar" class="container sukhbaatar-text"
-        >Sukhbaatar</label
-      >
-      <label for="altai" class="container altai-text">Altai 5 bogd</label>
-    </div>
-    <div class="image-container">
-      <input
-        type="checkbox"
-        id="sukhbaatar"
-        class="image-toggle sukhbaatar-toggle"
-      />
-      <input type="checkbox" id="altai" class="image-toggle altai-toggle" />
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRQNd8UV2Am27YXq7Jn7H-xULKaxfYq7XXlw&usqp=CAU"
-        alt="Sukhbaatar"
-        class="sukhbaatar-image"
-      />
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ06MMaNNg8gfexRFsgB-SQwuJyo9SXO9fvLw&usqp=CAU"
-        alt="Altai 5"
-        class="altai-image"
-      />
-    </div>
-  </body>
+  <body></body>
 </html>
