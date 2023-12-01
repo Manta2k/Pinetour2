@@ -55,110 +55,238 @@
 //   console.log("bhguee");
 // }
 //switch
-let person = "dulmaa";
-let irsen;
-switch (person) {
-  case "naraa":
-    irsen = "naraa irlee";
-    break;
-  case "baldan":
-    irsen = "baldan irlee";
-    break;
-  case "dulmaa":
-    irsen = "dulmaa irlee";
-    break;
-  case "galt":
-    irsen = "galt irlee";
-    break;
-  case "goldon":
-    irsen = "goldon irlee";
-    break;
-  default:
-    person = "oroh bolomjgui";
-}
-console.log(person);
+// let person = "dulmaa";
+// let irsen;
+// switch (person) {
+//   case "naraa":
+//     irsen = "naraa irlee";
+//     break;
+//   case "baldan":
+//     irsen = "baldan irlee";
+//     break;
+//   case "dulmaa":
+//     irsen = "dulmaa irlee";
+//     break;
+//   case "galt":
+//     irsen = "galt irlee";
+//     break;
+//   case "goldon":
+//     irsen = "goldon irlee";
+//     break;
+//   default:
+//     person = "oroh bolomjgui";
+// }
+// console.log(person);
 
 // discriminant
-let posit = -2;
-if (posit >= 0) {
-  console.log("eyreg too");
-} else posit < 0;
-console.log("sorog too");
+// let posit = -2;
+// if (posit >= 0) {
+//   console.log("eyreg too");
+// } else posit < 0;
+// console.log("sorog too");
 
-let n = 101;
-let n1 = 45;
-let n2 = 12;
+// let n = 101;
+// let n1 = 45;
+// let n2 = 12;
 
-if (n < n2 && n1 < n2) {
-  console.log(n2);
-} else if (n2 < n1 && n < n1) {
-  console.log(n1);
-} else if (n1 < n && n2 < n) {
-  console.log(n);
-} else {
-  console.log("tentsuu");
-}
+// if (n < n2 && n1 < n2) {
+//   console.log(n2);
+// } else if (n2 < n1 && n < n1) {
+//   console.log(n1);
+// } else if (n1 < n && n2 < n) {
+//   console.log(n);
+// } else {
+//   console.log("tentsuu");
+// }
 //BMI
-let biyiin;
-let weight = 63;
-let height = 173;
-biyiin = weight / (height / 100) ** 2;
+// let biyiin;
+// let weight = 63;
+// let height = 173;
+// biyiin = weight / (height / 100) ** 2;
 
-if (biyiin < 18.5) {
-  console.log("jingiin dutagdal");
-} else if (biyiin >= 18.5 && biyiin <= 24.9) {
-  console.log("eruul");
-} else if (biyiin > 24.9 && biyiin <= 30) {
-  console.log("iluudel jintei");
-} else if (biyiin > 30) {
-  console.log("het targalalt");
-}
+// if (biyiin < 18.5) {
+//   console.log("jingiin dutagdal");
+// } else if (biyiin >= 18.5 && biyiin <= 24.9) {
+//   console.log("eruul");
+// } else if (biyiin > 24.9 && biyiin <= 30) {
+//   console.log("iluudel jintei");
+// } else if (biyiin > 30) {
+//   console.log("het targalalt");
+// }
 // TERNARY
-let nas = 16;
-let message = nas >= 21 ? "uuj bolno" : "arilj uz";
-console.log(message);
+// let nas = 16;
+// let message = nas >= 21 ? "uuj bolno" : "arilj uz";
+// console.log(message);
 //year
 
-let year = 2036;
-let ondorJil = year % 4 === 0 ? true : false;
-console.log(ondorJil);
+// let year = 2036;
+// let ondorJil = year % 4 === 0 ? true : false;
+// console.log(ondorJil);
 
 // hamgiin baga too
-let a = 60;
-let b = 27;
-let c = 62;
-let d = 53;
+// let a = 60;
+// let b = 27;
+// let c = 62;
+// let d = 53;
 
-if (a < b && a < c && a < d) {
-  console.log(a);
-} else if (b < a && b < c && b < d) {
-  console.log(b);
-} else if (c < a && c < b && c < d) {
-  console.log(c);
-} else if (d < a && d < b && d < c) {
-  console.log(d);
-}
+// if (a < b && a < c && a < d) {
+//   console.log(a);
+// } else if (b < a && b < c && b < d) {
+//   console.log(b);
+// } else if (c < a && c < b && c < d) {
+//   console.log(c);
+// } else if (d < a && d < b && d < c) {
+//   console.log(d);
+// }
 // baguud dundaj
-let teamA1 = 33213123;
-let teamA2 = 9;
-let teamA3 = 53;
-let teamB1 = 53;
-let teamB2 = 12;
-let teamB3 = 13;
-averageA = (teamA1 += teamA2 += teamA3) / 3;
-averageB = (teamB1 += teamB2 += teamB3) / 3;
+// let teamA1 = 300;
+// let teamA2 = 100;
+// let teamA3 = 200;
+// let teamB1 = 300;
+// let teamB2 = 100;
+// let teamB3 = 200;
+// averageA = (teamA1 += teamA2 += teamA3) / 3;
+// averageB = (teamB1 += teamB2 += teamB3) / 3;
 // let winA = averageA > averageB && averageA > 100 ? "a yllaa" : "aaaa";
 // console.log(winA);
 // let winB = averageB > averageA && averageB > 100 ? "b yllaa" : "bbbb";
 // console.log(winB);
+// let draw = (averageA += averageB) / 2 > 100 ? "tsentslee" : "ttttt";
 // let noWin =
 //   (averageA > averageB || averageB > averageA) < 100 ? "no winer" : "noononon";
 // console.log(noWin);
 
-if (averageA > averageB && averageA > 100) {
-  console.log("team A yllaa");
-} else if (averageB > averageA && averageB > 100) {
-  console.log("team B yllaa");
-} else if ((averageA > averageB || averageB > averageA) < 100) {
-  console.log("ylagch bhgui");
+// if (averageA > averageB && averageA > 100) {
+//   console.log("team A yllaa");
+// } else if (averageB > averageA && averageB > 100) {
+//   console.log("team B yllaa");
+// } else if ((averageA += averageB) / 2 > 100) {
+//   console.log("tentslee");
+// } else if ((averageA > averageB || averageB > averageA) < 100) {
+//   console.log("ylagch bhgui");
+// }
+
+// CURRENCY
+// alert("ONLY usd,cny,rub,mnt 4 iin hoorond");
+// let too = parseInt(window.prompt("Mungunii TOO oruul nuu?"));
+// let temdeg = window.prompt("temdegt !!!usd,cny,rub,mnt!!! oruulna uu?");
+// let antemdeg = window.prompt(
+//   "ali temdegtruu !!!usd,cny,rub,mnt!!! horvuuleh ve?"
+// );
+// if (too == [0 - 9]) {
+//   console.log("pass");
+// } else {
+//   console.log("fail");
+// }
+// if (!/^[a-zA-Z]+$/.test(temdeg) || !temdeg) {
+//   alert("You did not enter a string");
+// }
+// if (!/^[a-zA-Z]+$/.test(antemdeg) || !antemdeg) {
+//   alert("You did not enter a string");
+// }
+// if (temdeg == "usd" && antemdeg == "cny") {
+//   console.log(too * (3450 / 380) + "\n iim cny bolno");
+// } else if (temdeg == "usd" && antemdeg == "rub") {
+//   console.log(too * (3450 / 38) + "\n iim rub bolno");
+// } else if (temdeg == "usd" && antemdeg == "mnt") {
+//   console.log(too * 3450 + "\n iim mnt bolno");
+// }
+// if (temdeg == "cny" && antemdeg == "usd") {
+//   console.log(too * (380 / 3450) + "\n iim usd bolno");
+// } else if (temdeg == "cny" && antemdeg == "rub") {
+//   console.log(too * (38 / 3450) + "\n iim rub bolno");
+// } else if (temdeg == "cny" && antemdeg == "rub") {
+//   console.log(too / 380 + "\n iim mnt bolno");
+// }
+// if (temdeg == "rub" && antemdeg == "usd") {
+//   console.log(too * (38 / 3450) + "\n iim usd bolno");
+// } else if (temdeg == "rub" && antemdeg == "cny") {
+//   console.log(too * (38 / 380) + "\n iim cny bolno");
+// } else if (temdeg == "rub" && antemdeg == "mnt") {
+//   console.log(too / 38 + "\n iim mnt bolno");
+// }
+// if (temdeg == "mnt" && antemdeg == "usd") {
+//   console.log(too / 3450 + "\n iim usd bolno");
+// } else if (temdeg == "mnt" && antemdeg == "rub") {
+//   console.log(too / 38 + "\n iim cny bolno");
+// } else if (temdeg == "mnt" && antemdeg == "cny") {
+//   console.log(too / 380 + "\n iim mnt bolno");
+// }
+// if (temdeg == "" && antemdeg == "") {
+//   console.log(alert("SANUULAAD BHAD L TENEGT HIIN MAA"));
+// } else if ((temdeg == "usd", "rub", "cny" && antemdeg == "")) {
+//   console.log(alert("SANUULAAD BHAD L TENEGT HIIN MAA"));
+// }
+//VENDING MACHINE
+
+let baraa = window.prompt(
+  "Baraagaa songono uu? \n 1.Cola-1200 \n 2.Sprite-1500 \n 3.Alpen gold-2000 \n 4.Suu-2200 \n 5.Talh-1000 \n 6. Zairmag-500 \n 7.Bohi-150 \n 8.Arhi-15000"
+);
+switch (baraa) {
+  case "1":
+    baraa = 1200;
+    break;
+  case "2":
+    baraa = 1500;
+    break;
+  case "3":
+    baraa = 2000;
+    break;
+  case "4":
+    baraa = 2200;
+    break;
+  case "5":
+    baraa = 1000;
+    break;
+  case "6":
+    baraa = 500;
+    break;
+  case "7":
+    baraa = 150;
+    break;
+  case "8":
+    baraa = 15000;
+    break;
+
+  default:
+    console.log("baihgui baraa bn !!!");
+    break;
+}
+let mungu = window.prompt(
+  "Ali mungun devsgert ashiglah ve?\n 1.5000\n2.10000\n3.20000"
+);
+switch (mungu) {
+  case "1":
+    mungu = 5000;
+    break;
+  case "2":
+    mungu = 10000;
+    break;
+  case "3":
+    mungu = 20000;
+    break;
+  default:
+    console.log("buruu mungun temdegt bn !!!");
+    break;
+}
+let hariult = mungu - baraa;
+window.alert(hariult);
+
+let Q = parseInt(hariult / 10000);
+let W = parseInt((hariult - 10000) / 5000);
+let E = parseInt((hariult - 15000) / 1000);
+let R = parseInt((hariult - 15000 - E * 1000) / 500);
+let T = parseInt((hariult - 15000 - E * 1000 - 500) / 100);
+let Y = parseInt((hariult - 15000 - E * 1000 - 500 - T * 100) / 50);
+
+if (Q && W && E && R && T && Y) {
+  console.log(Q * 10000 + W * 5000 + E * 1000 + R * 500 + T * 100 + Y * 50);
+} else if (W && E && R && T && Y) {
+  console.log(W * 5000 + E * 1000 + R * 500 + T * 100 + Y * 50);
+} else if (E && R && T && Y) {
+  console.log(E * 1000 + R * 500 + T * 100 + Y * 50);
+} else if (R && T && Y) {
+  console.log(R * 500 + T * 100 + Y * 50);
+} else if (T && Y) {
+  console.log(T * 100 + Y * 50);
 }
