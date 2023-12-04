@@ -219,74 +219,111 @@
 // }
 //VENDING MACHINE
 
-let baraa = window.prompt(
-  "Baraagaa songono uu? \n 1.Cola-1200 \n 2.Sprite-1500 \n 3.Alpen gold-2000 \n 4.Suu-2200 \n 5.Talh-1000 \n 6. Zairmag-500 \n 7.Bohi-150 \n 8.Arhi-15000"
-);
-switch (baraa) {
-  case "1":
-    baraa = 1200;
-    break;
-  case "2":
-    baraa = 1500;
-    break;
-  case "3":
-    baraa = 2000;
-    break;
-  case "4":
-    baraa = 2200;
-    break;
-  case "5":
-    baraa = 1000;
-    break;
-  case "6":
-    baraa = 500;
-    break;
-  case "7":
-    baraa = 150;
-    break;
-  case "8":
-    baraa = 15000;
-    break;
+// let baraa = window.prompt(
+//   "Baraagaa songono uu? \n 1.Cola-1200 \n 2.Sprite-1500 \n 3.Alpen gold-2000 \n 4.Suu-2200 \n 5.Talh-1000 \n 6. Zairmag-500 \n 7.Bohi-150 \n 8.Arhi-15000"
+// );
+// switch (baraa) {
+//   case "1":
+//     baraa = 1200;
+//     break;
+//   case "2":
+//     baraa = 1500;
+//     break;
+//   case "3":
+//     baraa = 2000;
+//     break;
+//   case "4":
+//     baraa = 2200;
+//     break;
+//   case "5":
+//     baraa = 1000;
+//     break;
+//   case "6":
+//     baraa = 500;
+//     break;
+//   case "7":
+//     baraa = 150;
+//     break;
+//   case "8":
+//     baraa = 15000;
+//     break;
 
-  default:
-    console.log("baihgui baraa bn !!!");
-    break;
-}
-let mungu = window.prompt(
-  "Ali mungun devsgert ashiglah ve?\n 1.5000\n2.10000\n3.20000"
-);
-switch (mungu) {
-  case "1":
-    mungu = 5000;
-    break;
-  case "2":
-    mungu = 10000;
-    break;
-  case "3":
-    mungu = 20000;
-    break;
-  default:
-    console.log("buruu mungun temdegt bn !!!");
-    break;
-}
-let hariult = mungu - baraa;
-window.alert(hariult);
+//   default:
+//     console.log("baihgui baraa bn !!!");
+//     break;
+// }
+// let mungu = window.prompt(
+//   "Ali mungun devsgert ashiglah ve?\n 1.5000\n2.10000\n3.20000"
+// );
+// switch (mungu) {
+//   case "1":
+//     mungu = 5000;
+//     break;
+//   case "2":
+//     mungu = 10000;
+//     break;
+//   case "3":
+//     mungu = 20000;
+//     break;
+//   default:
+//     console.log("buruu mungun temdegt bn !!!");
+//     break;
+// }
+// let hariult = mungu - baraa;
+// window.alert(hariult);
 
-let Q = parseInt(hariult / 10000);
-let W = parseInt((hariult - 10000) / 5000);
-let E = parseInt((hariult - 15000) / 1000);
-let R = parseInt((hariult - 15000 - E * 1000) / 500);
-let T = parseInt((hariult - 15000 - E * 1000 - 500) / 100);
-let Y = parseInt((hariult - 15000 - E * 1000 - 500 - T * 100) / 50);
+// let Q = parseInt(hariult / 10000);
+// let W = parseInt((hariult - 10000) / 5000);
+// let E = parseInt((hariult - 15000) / 1000);
+// let R = parseInt((hariult - 15000 - E * 1000) / 500);
+// let T = parseInt((hariult - 15000 - E * 1000 - 500) / 100);
+// let Y = parseInt((hariult - 15000 - E * 1000 - 500 - T * 100) / 50);
 
-if (Q && W && E && R && T && Y) {
-  console.log(Q * 10000 + W * 5000 + E * 1000 + R * 500 + T * 100 + Y * 50);
-} else if (W && E && R && T && Y) {
-  console.log(W * 5000 + E * 1000 + R * 500 + T * 100 + Y * 50);
-} else if (E && R && T && Y) {
-  console.log(E * 1000 + R * 500 + T * 100 + Y * 50);
-} else if (R && T && Y) {
-  console.log(R * 500 + T * 100 + Y * 50);
-} else if (T && Y) {
-  console.log(T * 100 + Y * 50);
+// if (Q && W && E && R && T && Y) {
+//   console.log(Q * 10000 + W * 5000 + E * 1000 + R * 500 + T * 100 + Y * 50);
+// } else if (W && E && R && T && Y) {
+//   console.log(W * 5000 + E * 1000 + R * 500 + T * 100 + Y * 50);
+// } else if (E && R && T && Y) {
+//   console.log(E * 1000 + R * 500 + T * 100 + Y * 50);
+// } else if (R && T && Y) {
+//   console.log(R * 500 + T * 100 + Y * 50);
+// } else if (T && Y) {
+//   console.log(T * 100 + Y * 50);
+// }
+
+//FUNCTION
+// let input = prompt("ner?");
+// presentName(input);
+// function presentName(name) {
+//   console.log(name);
+// }
+
+let too = prompt(" ehnii too");
+let too2 = prompt("2 doh too");
+calculator(too, too2);
+function calculator(a, b) {
+  let select = prompt("1.*\n2./\n3.+\n4.-\n5.^2");
+  switch (select) {
+    case "1":
+      select = a * b;
+      break;
+    case "2":
+      select = a / b;
+      break;
+    case "3":
+      select = a += b;
+      break;
+    case "4":
+      select = a - b;
+      break;
+    case "5":
+      let T = a ** 2;
+      let Y = b ** 2;
+      console.log(T, Y);
+      break;
+    default:
+      console.log("buruu orolt");
+      break;
+  }
+  console.log(select);
 }
