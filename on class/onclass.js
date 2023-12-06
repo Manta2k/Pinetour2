@@ -298,32 +298,92 @@
 //   console.log(name);
 // }
 
-let too = prompt(" ehnii too");
-let too2 = prompt("2 doh too");
-calculator(too, too2);
-function calculator(a, b) {
-  let select = prompt("1.*\n2./\n3.+\n4.-\n5.^2");
-  switch (select) {
-    case "1":
-      select = a * b;
-      break;
-    case "2":
-      select = a / b;
-      break;
-    case "3":
-      select = a += b;
-      break;
-    case "4":
-      select = a - b;
-      break;
-    case "5":
-      let T = a ** 2;
-      let Y = b ** 2;
-      console.log(T, Y);
-      break;
-    default:
-      console.log("buruu orolt");
-      break;
-  }
-  console.log(select);
+// let too = prompt(" ehnii too");
+// let too2 = prompt("2 doh too");
+// calculator(too, too2);
+// function calculator(a, b) {
+//   let select = prompt("1.*\n2./\n3.+\n4.-\n5.^2");
+//   switch (select) {
+//     case "1":
+//       select = a * b;
+//       break;
+//     case "2":
+//       select = a / b;
+//       break;
+//     case "3":
+//       select = a += b;
+//       break;
+//     case "4":
+//       select = a - b;
+//       break;
+//     case "5":
+//       let T = a ** 2;
+//       let Y = b ** 2;
+//       console.log(T, Y);
+//       break;
+//     default:
+//       console.log("buruu orolt");
+//       break;
+//   }
+//   console.log(select);
+// }
+
+//GURVALJIN
+
+// function calculateTriangleArea(a, b, c) {
+//   const s = (a + b + c) / 2;
+//   const area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+//   return area;
+// }
+// const sideA = 5;
+// const sideB = 6;
+// const sideC = 7;
+// const triangleArea = calculateTriangleArea(sideA, sideB, sideC);
+// console.log(triangleArea);
+
+//      X
+// let x = prompt("too");
+// function fff(x) {
+//   return x ** 2 + 5 * x + 6;
+// }
+// console.log(fff(x));
+
+// ARRAY
+// LOOP
+// let names = ["Bat", "Baldan", "Dulmaa", "Gonchig", "Luubat", "Manjin"];
+// let i = 0;
+// while (i <= names.length - 1) {
+//   console.log(names[i]);
+//   i++;
+// }
+
+// let a = 3,
+//   b = 0;
+// let hurd;
+// while (b < 11) {
+//   hurd = a * b;
+//   b++;
+//   console.log(hurd);
+// }
+
+// TOONII NIILBER
+// let too = prompt("too");
+// let sum = 0;
+// let i = 1;
+// while (too >= i) {
+//   sum += i;
+//   i++;
+// }
+// console.log(sum);
+
+// TOONII GUESS
+let randomNumber = 36;
+let guess = prompt("guess too?");
+while (!randomNumber) {
+  if (guess < randomNumber) {
+    guess = prompt("baga bn too chin");
+  } else if (guess > randomNumber) {
+    guess = prompt("ih bn too chin");
+  } else console.log("ta taalaa");
+  guess === randomNumber;
 }
