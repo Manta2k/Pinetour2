@@ -360,11 +360,11 @@
 // let a = 3,
 //   b = 0;
 // let hurd;
-// while (b < 11) {
+// while (b < 4) {
 //   hurd = a * b;
 //   b++;
-//   console.log(hurd);
 // }
+// console.log(hurd);
 
 // TOONII NIILBER
 // let too = prompt("too");
@@ -377,13 +377,53 @@
 // console.log(sum);
 
 // TOONII GUESS
-let randomNumber = 36;
-let guess = prompt("guess too?");
-while (!randomNumber) {
-  if (guess < randomNumber) {
-    guess = prompt("baga bn too chin");
-  } else if (guess > randomNumber) {
-    guess = prompt("ih bn too chin");
-  } else console.log("ta taalaa");
-  guess === randomNumber;
+// let randomNumber = 36;
+// let guess = prompt("guess too?");
+// while (!randomNumber) {
+//   if (guess < randomNumber) {
+//     guess = prompt("baga bn too chin");
+//   } else if (guess > randomNumber) {
+//     guess = prompt("ih bn too chin");
+//   } else console.log("ta taalaa");
+//   guess === randomNumber;
+// }
+
+// 1000-AAS BAGA BH
+
+// let gar = prompt("too?");
+// let i = 1;
+// let hariu = 1;
+// while (hariu < 1000) {
+//   hariu = gar ** i;
+//   if (hariu > 1000) {
+//     console.log(
+//       "1000 aas ih " + gar + " ^ " + i + " nii zereg iim bn " + hariu
+//     );
+//   } else if (hariu == 1000) {
+//     console.log(
+//       "1000 tai tentsuu " + gar + " ^ " + i + " nii zereg iim bn " + hariu
+//     );
+//   }
+//   i++;
+// }
+// TEGSH TOONUUDIIN NIILBER
+
+// let a = prompt("toogoo?");
+// let sum = 0;
+// for (let index = 0; index <= a; index++) {
+//   if (index % 2 == 0) {
+//     sum = sum + index;
+//   }
+// }
+// console.log(sum);
+
+//PYRAMID
+
+let N = prompt("N too?");
+for (let i = 0; i <= N; i++) {
+  let line = "";
+  for (let k = 0; k < i; k++) {
+    line += "*";
+  }
+  console.log(line);
 }
