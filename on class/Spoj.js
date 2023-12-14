@@ -250,16 +250,69 @@
 // Tostring(fruits1);
 
 // davtalt includes
-const fruits1 = ["Banana", "Apple", "Orange", "Mango"];
+// const fruits1 = ["Banana", "Apple", "Orange", "Mango"];
 
-const findIndex = (fruit) => {
-  for (let i = 0; i < fruits1.length; i++) {
-    if (fruits1[i] === fruit) {
-      console.log("true");
-      return;
-    }
-  }
-  console.log("false");
-};
+// const findIndex = (fruit) => {
+//   for (let i = 0; i < fruits1.length; i++) {
+//     if (fruits1[i] === fruit) {
+//       console.log("true");
+//       return;
+//     }
+//   }
+//   console.log("false");
+// };
 
-findIndex("Mango");
+// findIndex("Mango");
+
+// 12.13
+// targettai tentsuu index oloh
+
+// const arr = [2, 3, 5, 10, 7];
+// const target = 9;
+// let sum;
+// for (let i = 0; i < arr.length; i++) {
+//   for (let j = i + 1; j >= 0; j--) {
+//     sum = arr[i] + arr[j];
+//     if (sum == 9) {
+//       console.log(i, j);
+//     }
+//   }
+// }
+
+// reverse an array
+
+// const arr = [2, 3, 5, 10, 7];
+// for (let i = arr.length - 1; i >= 0; i--) {
+//   console.log(arr[i]);
+// }
+
+//Find Maximum element
+
+// const arr = [2, 3, 5, 10, 7];
+// let max;
+// for (let i = 0; i < arr.length; i++) {
+//   max = arr[i];
+//   if (max > arr[i]) {
+//     console.log(i);
+//   }
+// }
+
+// Remove Duplicates :
+
+// const ars = [1, 1, 2, 2, 3, 3, 3, 3, 4, 5, 6, 6];
+// const space = [];
+// for (let i = 0; i < ars.length; i++) {
+//   let isDuplicate = false;
+//   for (let j = 0; j < i; j++) {
+//     if (ars[j] === ars[i]) {
+//       isDuplicate = true;
+//       break;
+//     }
+//   }
+//   if (!isDuplicate) {
+//     space.push(ars[i]);
+//   }
+// }
+// console.log(space);
+
+// 12.14
