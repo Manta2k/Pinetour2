@@ -1,0 +1,14 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+button {
+  width: 200px;
+  height: 100px;
+}
+.colorChange {
+  background-color: aqua;
+}

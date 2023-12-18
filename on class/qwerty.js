@@ -42,9 +42,16 @@
 
 // remove duplicate
 
-const obj = {
-  a: 5,
-  b: 10,
-  c: 3,
+// 12.15
+
+const mockObject = {
+  key1: "value1",
+  key2: 42,
+  key3: ["item1", "item2"],
+  key4: { nestedKey: "nestedValue" },
+  key5: true,
+  key6: null,
 };
-let sum = 0;
+const changeValue = (obj) => {
+  for (let i = 0; i < obj.length; i++) {}
+};
