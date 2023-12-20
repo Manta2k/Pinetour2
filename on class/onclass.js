@@ -419,11 +419,32 @@
 
 //PYRAMID
 
-let N = prompt("N too?");
-for (let i = 0; i <= N; i++) {
-  let line = "";
-  for (let k = 0; k < i; k++) {
-    line += "*";
-  }
-  console.log(line);
-}
+// let N = prompt("N too?");
+// for (let i = 0; i <= N; i++) {
+//   let line = "";
+//   for (let k = 0; k < i; k++) {
+//     line += "*";
+//   }
+//   console.log(line);
+// }
+
+const second = document.getElementsByClassName("second")[0];
+const start = document.getElementsByClassName("start")[0];
+const pause = document.getElementsByClassName("pause")[0];
+const reset = document.getElementsByClassName("reset")[0];
+
+let timerInterval;
+const startFunction = () => {
+  let seconds = 0;
+  second.innerText = seconds;
+  timerInterval = setInterval(() => {
+    seconds++;
+    second.innerText = seconds;
+  }, 1000);
+};
+start.addEventListener("click", startFunction);
+
+const pauseFunction = () => {
+  clearInterval(timerInterval);
+};
+pause.addEventListener("click", pauseFunction);

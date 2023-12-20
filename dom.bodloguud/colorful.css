@@ -1,0 +1,10 @@
+.innerCircle {
+  display: flex;
+  flex-wrap: wrap;
+}
+.circle {
+  border-radius: 100%;
+  background-color: brown;
+  width: 40px;
+  height: 40px;
+}
