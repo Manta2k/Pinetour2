@@ -1,0 +1,42 @@
+.A {
+  width: 200px;
+  height: 200px;
+  background-image: url(crash.png);
+  border: 5px solid red;
+}
+.S {
+  width: 200px;
+  height: 200px;
+  background-image: url(kick.png);
+  border: 5px solid red;
+}
+.D {
+  width: 200px;
+  height: 200px;
+  background-image: url(snare.png);
+  border: 5px solid red;
+}
+.F {
+  width: 200px;
+  height: 200px;
+  background-image: url(tom1.png);
+  border: 5px solid red;
+}
+.G {
+  width: 200px;
+  height: 200px;
+  background-image: url(tom2.png);
+  border: 5px solid red;
+}
+.H {
+  width: 200px;
+  height: 200px;
+  background-image: url(tom3.png);
+  border: 5px solid red;
+}
+.J {
+  width: 200px;
+  height: 200px;
+  background-image: url(tom4.png);
+  border: 5px solid red;
+}

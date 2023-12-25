@@ -428,23 +428,109 @@
 //   console.log(line);
 // }
 
-const second = document.getElementsByClassName("second")[0];
-const start = document.getElementsByClassName("start")[0];
-const pause = document.getElementsByClassName("pause")[0];
-const reset = document.getElementsByClassName("reset")[0];
+// const second = document.getElementsByClassName("second")[0];
+// const start = document.getElementsByClassName("start")[0];
+// const pause = document.getElementsByClassName("pause")[0];
+// const reset = document.getElementsByClassName("reset")[0];
 
-let timerInterval;
-const startFunction = () => {
-  let seconds = 0;
-  second.innerText = seconds;
-  timerInterval = setInterval(() => {
-    seconds++;
-    second.innerText = seconds;
-  }, 1000);
-};
-start.addEventListener("click", startFunction);
+// let timerInterval;
+// const startFunction = () => {
+//   let seconds = 0;
+//   second.innerText = seconds;
+//   timerInterval = setInterval(() => {
+//     seconds++;
+//     second.innerText = seconds;
+//   }, 1000);
+// };
+// start.addEventListener("click", startFunction);
 
-const pauseFunction = () => {
-  clearInterval(timerInterval);
-};
-pause.addEventListener("click", pauseFunction);
+// const pauseFunction = () => {
+//   clearInterval(timerInterval);
+// };
+// pause.addEventListener("click", pauseFunction);
+
+// const array = [1, 2, 3, 4, 5, 6];
+// const newArr = [];
+// const multiply = () => {
+//   for (let i = 0; i < array.length; i++) {
+//     newArr.push(array[i] * 2);
+//   }
+// };
+// multiply();
+// console.log(newArr);
+
+// const renew = [];
+// const divide = () => {
+//   for (let i = 0; i < array.length; i++) {
+//     const hariu = array[i] % 2 == 0;
+//     if (hariu) {
+//       renew.push(hariu);
+//     }
+//   }
+//   return renew;
+// };
+// divide();
+// console.log(renew);
+
+//MAP AND FILTER
+
+// const array = [1, 2, 3, 4, 5, 6];
+// const odd = array.filter((a) => {
+//   if (a % 2 == 1) {
+//     return a;
+//   }
+// });
+// console.log(odd);
+
+// const arr = [1, 2, 3, 4, 5];
+// const sqr = arr.map((s) => {
+//   s ** 2;
+//   return s ** 2;
+// });
+// console.log(sqr);
+
+// const arr = ["apple", "banana", "cherry"];
+// const tomUseg = arr.map((t) => {
+//   return t.toLocaleUpperCase();
+// });
+// console.log(tomUseg);
+
+// const arr = ["cat", "dog", "elephant", "lion"];
+// const zaanLion = arr.filter((ami) => {
+//   return ami.length >= 4;
+// });
+// console.log(zaanLion);
+
+// const arr = [{ name: "Alice" }, { name: "Bob" }, { name: "Charlie" }];
+// const takeValue = arr.map((a) => {
+//   return a.name;
+// });
+// console.log(takeValue);
+
+// const arr = [1, "apple", true, 42, "banana"];
+// const takeString = arr.filter((t) => {
+//   return t.charAt;
+// });
+// console.log(takeString);
+
+const input = [1, 2, 2, 3, 4, 4, 5];
+const space = [];
+let hos;
+const pair = input.map((a, i) => {
+  if (!hos) {
+    space.push(a[i]);
+  }
+  map((b, k) => {
+    if (a[i] === b[k]) {
+      hos = true;
+    }
+  });
+});
+console.log(pair);
+
+// const array1 = ["a", "b", "c"];
+// const array2 = [1, 2, 3];
+// const combine = array1.map((a, i) => {
+//   return `${a}-${array2[i]}`;
+// });
+// console.log(combine);
