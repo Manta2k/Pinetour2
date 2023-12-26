@@ -20,7 +20,7 @@ body {
 }
 .inner {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   width: 260px;
   height: 160px;
   background-color: aliceblue;
@@ -30,9 +30,13 @@ body {
 }
 .addcart {
   font-size: large;
+  padding-left: 10px;
+  margin-top: 10px;
 }
 .addcart:hover {
   cursor: pointer;
+  background-color: #c3c4c3;
+  border-radius: 10px;
 }
 .checkCircle {
   display: flex;
@@ -45,9 +49,14 @@ body {
 }
 .checkCircle:hover {
   background-color: grey;
+  cursor: pointer;
 }
 .mini-todo {
   margin-left: 10px;
+}
+.header {
+  font-weight: bolder;
+  font-size: large;
 }
 .delete {
   display: flex;
@@ -57,23 +66,10 @@ body {
   border: 1px solid black;
   width: 25px;
   height: 25px;
-  animation: coin-flip 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
-@keyframes coin-flip {
-  0%,
-  100% {
-    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
-  }
-  0% {
-    transform: rotateY(0deg);
-  }
-  50% {
-    transform: rotateY(1800deg);
-    animation-timing-function: cubic-bezier(0, 0.15, 3.5, 10);
-  }
-  100% {
-    transform: rotateY(3600deg);
-  }
+.delete:hover {
+  background-color: grey;
+  cursor: pointer;
 }
 h3 {
   text-align: left;
