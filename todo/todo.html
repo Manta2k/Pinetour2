@@ -3,24 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Todo List</title>
     <link rel="stylesheet" href="todo.css" />
   </head>
   <body>
-    <div class="con1">
+    <div
+      class="con1"
+      ondrop="drop(event)"
+      ondragover="allowDrop(event)"
+      id="ToDo"
+    >
       <div class="header">To Do</div>
-      <div class="inner">
-        <div class="checkCircle">&check;</div>
-        <div class="mini-todo">
-          <h3>ToDo</h3>
-        </div>
-        <div class="delete">&#10060;</div>
-      </div>
-      <div class="addcart">&plus; Add card</div>
+      <div class="addcart" onclick="show()" id="new">&plus; Add card</div>
     </div>
-    <div class="con1"></div>
-    <div class="con1"></div>
-    <div class="con1"></div>
+
+    <div
+      class="con1"
+      ondrop="drop(event)"
+      ondragover="allowDrop(event)"
+      id="InProgress"
+    >
+      <div class="header">In Progress</div>
+      <div class="addcart" onclick="show()" id="new">&plus; Add card</div>
+    </div>
+
+    <div
+      class="con1"
+      ondrop="drop(event)"
+      ondragover="allowDrop(event)"
+      id="Stuck"
+    >
+      <div class="header">Stuck</div>
+      <div class="addcart" onclick="show()" id="new">&plus; Add card</div>
+    </div>
+    <div
+      class="con1"
+      ondrop="drop(event)"
+      ondragover="allowDrop(event)"
+      id="Done"
+    >
+      <div class="header">Done</div>
+      <div class="addcart" onclick="show()" id="new">&plus; Add card</div>
+    </div>
+
+    <div class="modalContainer" onclick="hide(event)" id="myDIV">
+      <div class="modal">
+        <p>Title</p>
+        <input id="title-input" type="text" />
+        <p>Description</p>
+        <input id="description-input" type="text" />
+        <p>Status</p>
+        <select name="Status" id="Status-input">
+          <option type="text" value="To do">To do</option>
+          <option type="text" value="In progress">In progress</option>
+          <option type="text" value="Stuck">Stuck</option>
+          <option type="text" value="Done">Done</option>
+        </select>
+        <p>Priority</p>
+        <select name="Priority" id="Priority-input">
+          <option id="Priority-input" type="text">LOW</option>
+          <option id="Priority-input" type="text">MEDIUM</option>
+          <option id="Priority-input" type="text">HIGH</option>
+        </select>
+        <button onclick="addTodo()" class="btn">Submit</button>
+      </div>
+    </div>
+
     <script src="todo.js"></script>
   </body>
 </html>

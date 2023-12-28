@@ -513,20 +513,20 @@
 // });
 // console.log(takeString);
 
-const input = [1, 2, 2, 3, 4, 4, 5];
-const space = [];
-let hos;
-const pair = input.map((a, i) => {
-  if (!hos) {
-    space.push(a[i]);
-  }
-  map((b, k) => {
-    if (a[i] === b[k]) {
-      hos = true;
-    }
-  });
-});
-console.log(pair);
+// const input = [1, 2, 2, 3, 4, 4, 5];
+// const space = [];
+// let hos;
+// const pair = input.map((a, i) => {
+//   if (!hos) {
+//     space.push(a[i]);
+//   }
+//   map((b, k) => {
+//     if (a[i] === b[k]) {
+//       hos = true;
+//     }
+//   });
+// });
+// console.log(pair);
 
 // const array1 = ["a", "b", "c"];
 // const array2 = [1, 2, 3];
@@ -534,3 +534,5 @@ console.log(pair);
 //   return `${a}-${array2[i]}`;
 // });
 // console.log(combine);
+
+const boxArray = [1, 2, 3, 4, 6, 7];
