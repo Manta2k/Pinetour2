@@ -428,26 +428,26 @@
 //   console.log(line);
 // }
 
-// const second = document.getElementsByClassName("second")[0];
-// const start = document.getElementsByClassName("start")[0];
-// const pause = document.getElementsByClassName("pause")[0];
-// const reset = document.getElementsByClassName("reset")[0];
+const second = document.getElementsByClassName("second")[0];
+const start = document.getElementsByClassName("start")[0];
+const pause = document.getElementsByClassName("pause")[0];
+const reset = document.getElementsByClassName("reset")[0];
 
-// let timerInterval;
-// const startFunction = () => {
-//   let seconds = 0;
-//   second.innerText = seconds;
-//   timerInterval = setInterval(() => {
-//     seconds++;
-//     second.innerText = seconds;
-//   }, 1000);
-// };
-// start.addEventListener("click", startFunction);
+let timerInterval;
+const startFunction = () => {
+  let seconds = 0;
+  second.innerText = seconds;
+  timerInterval = setInterval(() => {
+    seconds++;
+    second.innerText = seconds;
+  }, 1000);
+};
+start.addEventListener("click", startFunction);
 
-// const pauseFunction = () => {
-//   clearInterval(timerInterval);
-// };
-// pause.addEventListener("click", pauseFunction);
+const pauseFunction = () => {
+  clearInterval(timerInterval);
+};
+pause.addEventListener("click", pauseFunction);
 
 // const array = [1, 2, 3, 4, 5, 6];
 // const newArr = [];
@@ -513,20 +513,18 @@
 // });
 // console.log(takeString);
 
+// DUPLICATE NUMBER
+
 // const input = [1, 2, 2, 3, 4, 4, 5];
-// const space = [];
-// let hos;
-// const pair = input.map((a, i) => {
-//   if (!hos) {
-//     space.push(a[i]);
+// const uniqueNumbers = [];
+
+// input.forEach((a, i) => {
+//   if (input.indexOf(a) === i) {
+//     uniqueNumbers.push(a);
 //   }
-//   map((b, k) => {
-//     if (a[i] === b[k]) {
-//       hos = true;
-//     }
-//   });
 // });
-// console.log(pair);
+
+// console.log(uniqueNumbers);
 
 // const array1 = ["a", "b", "c"];
 // const array2 = [1, 2, 3];
@@ -535,4 +533,89 @@
 // });
 // console.log(combine);
 
-const boxArray = [1, 2, 3, 4, 6, 7];
+// let students = [
+//   {
+//     name: "Сэд-Эрдэнэ",
+//     age: 19,
+//     gender: "male",
+//   },
+//   {
+//     name: "Индра",
+//     age: 19,
+//     gender: "female",
+//   },
+//   {
+//     name: "Хатнаа ",
+//     age: 21,
+//     gender: "male",
+//   },
+//   {
+//     name: "Тэмүүлэн",
+//     age: 24,
+//     gender: "male",
+//   },
+//   {
+//     name: "Намуун",
+//     age: 23,
+//     gender: "female",
+//   },
+// ];
+// const sameAge = () => {
+//   for (let i = 0; i < students.length; i++) {
+//     let sameAgedStudents = [];
+//     for (let j = 0; j < students.length; j++) {
+//       if (i !== j && students[i].age === students[j].age) {
+//         sameAgedStudents.push(students[j]);
+//         console.log(...sameAgedStudents);
+//       }
+//     }
+//   }
+// };
+// sameAge();
+
+// const countGender = (array) => {
+//   let obj = {};
+//   array.forEach((element) => {
+//     if (obj[element.gender]) {
+//       obj[element.gender]++;
+//     } else {
+//       obj[element.gender] = 1;
+//     }
+//   });
+//   return obj;
+// };
+// console.log(countGender(students));
+
+// const averageAge = () => {
+//   let age = 0;
+//   let result;
+//   for (let i = 0; i < students.length; i++) {
+//     result = (age += students[i].age) / students.length;
+//   }
+//   return result;
+// };
+// console.log(averageAge());
+
+// const addLastName = () => {
+//   for (let i = 0; i < students.length; i++) {
+//     students[i] = { ...students[i], lastName: "Hello" };
+//   }
+//   return students;
+// };
+// console.log(addLastName());
+
+// BUGDENGIIH NI NASIIG 19 BOLGOH
+// const sameAge = () => {
+//   const result = [];
+//   students.forEach((student, index) => {
+//     const sameAged = students.filter(
+//       (s, i) => i !== index && s.age === student.age
+//     );
+//     if (sameAged.length > 0) {
+//       result.push(student);
+//       sameAged.forEach((s) => result.push(s));
+//     }
+//   });
+//   return result;
+// };
+// console.log(sameAge());

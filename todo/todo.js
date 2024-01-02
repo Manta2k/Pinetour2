@@ -22,7 +22,6 @@ window.onclick = function hide(event) {
     modalContainer.classList.remove("show");
   }
 };
-
 const addTodo = () => {
   const title = document.getElementById("title-input").value;
   const description = document.getElementById("description-input").value;
