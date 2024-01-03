@@ -1,21 +1,17 @@
 const allowDrop = (event) => {
   event.preventDefault();
 };
-
 const drag = (event) => {
   event.dataTransfer.setData("text", event.target.id);
 };
-
 const drop = (event) => {
   event.preventDefault();
   const inner = event.dataTransfer.getData("text");
   event.target.appendChild(document.getElementById(inner));
 };
-
 const show = () => {
   modalContainer.classList.add("show");
 };
-
 const modalContainer = document.getElementsByClassName("modalContainer")[0];
 window.onclick = function hide(event) {
   if (event.target == modalContainer) {
@@ -27,15 +23,13 @@ const addTodo = () => {
   const description = document.getElementById("description-input").value;
   const status = document.getElementById("Status-input").value;
   const priority = document.getElementById("Priority-input").value;
-
   const newTodo = document.createElement("div");
   newTodo.classList.add("inner");
   newTodo.draggable = true;
   newTodo.id = "inner";
   newTodo.setAttribute("ondragstart", "drag(event)");
-
   newTodo.innerHTML = `
-      <div class="checkCircle">&#10003;</div>
+      <div class="checkCircle" onclick="clickDone(event)">&#10003;</div>
       <div class="mini-todo">
         <h3>${title}</h3>
         <p>${description}</p>
@@ -55,6 +49,11 @@ const addTodo = () => {
   }
   modalContainer.classList.remove("show");
   clearInputs();
+};
+
+const clickDone = (event) => {
+  const todoDone = event.target.parentElement;
+  document.getElementById("Done").appendChild(todoDone);
 };
 const deleteTodo = (event) => {
   const todoToDelete = event.target.parentElement;

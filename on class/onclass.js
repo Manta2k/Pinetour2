@@ -428,26 +428,26 @@
 //   console.log(line);
 // }
 
-const second = document.getElementsByClassName("second")[0];
-const start = document.getElementsByClassName("start")[0];
-const pause = document.getElementsByClassName("pause")[0];
-const reset = document.getElementsByClassName("reset")[0];
+// const second = document.getElementsByClassName("second")[0];
+// const start = document.getElementsByClassName("start")[0];
+// const pause = document.getElementsByClassName("pause")[0];
+// const reset = document.getElementsByClassName("reset")[0];
 
-let timerInterval;
-const startFunction = () => {
-  let seconds = 0;
-  second.innerText = seconds;
-  timerInterval = setInterval(() => {
-    seconds++;
-    second.innerText = seconds;
-  }, 1000);
-};
-start.addEventListener("click", startFunction);
+// let timerInterval;
+// const startFunction = () => {
+//   let seconds = 0;
+//   second.innerText = seconds;
+//   timerInterval = setInterval(() => {
+//     seconds++;
+//     second.innerText = seconds;
+//   }, 1000);
+// };
+// start.addEventListener("click", startFunction);
 
-const pauseFunction = () => {
-  clearInterval(timerInterval);
-};
-pause.addEventListener("click", pauseFunction);
+// const pauseFunction = () => {
+//   clearInterval(timerInterval);
+// };
+// pause.addEventListener("click", pauseFunction);
 
 // const array = [1, 2, 3, 4, 5, 6];
 // const newArr = [];
@@ -619,3 +619,45 @@ pause.addEventListener("click", pauseFunction);
 //   return result;
 // };
 // console.log(sameAge());
+
+//  1.3
+
+// HAMGIIN UH UTGA AVAH DED MASSIVE
+// const array = [-2, -3, 4, -1, -2, 1, 5, -3];
+// const findMaxSubarraySum = (arr) => {
+//   let maxNumber1 = 0;
+//   let maxNumber2 = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     maxNumber1 = Math.max(0, maxNumber1 + arr[i]);
+//     maxNumber2 = Math.max(maxNumber2, maxNumber1);
+//   }
+//   return maxNumber2;
+// };
+// const result = findMaxSubarraySum(array);
+// console.log(result);
+
+// const arr = [2, 5, 6, 7];
+// const target = 9;
+// for (let i = 0; i < arr.length; i++) {
+//   for (let j = i + 1; j < arr.length; j++) {
+//     if (arr[i] + arr[j] == target) {
+//       console.log(i, j);
+//     }
+//   }
+// }
+
+const string = "This is my dream i am superman";
+function getLongestWord(str) {
+  let words = str.split(" ");
+  let longestWord = "";
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length) {
+      longestWord = words[i];
+    }
+  }
+  console.log(longestWord);
+}
+getLongestWord(string);
+
+const str = ["pinecone", "pine", "pinelord"];
+const davhardsanWord = () => {};
