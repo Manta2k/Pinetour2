@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  color: white;
+}
+.start {
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  height: 50px;
+  background-color: green;
+}
+.start:hover {
+  cursor: pointer;
+}
+.pause {
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  height: 50px;
+  background-color: green;
+}
+.pause:hover {
+  cursor: pointer;
+}
+.reset {
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  height: 50px;
+  background-color: green;
+}
+.reset:hover {
+  cursor: pointer;
+}
+.second {
+  color: black;
+}
