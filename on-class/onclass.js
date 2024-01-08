@@ -428,6 +428,8 @@
 //   console.log(line);
 // }
 
+// TIMER
+
 // const second = document.getElementsByClassName("second")[0];
 // const start = document.getElementsByClassName("start")[0];
 // const pause = document.getElementsByClassName("pause")[0];
@@ -685,25 +687,15 @@
 // const result = objKey.sort();
 // console.log(result);
 
-// let today = "2024-01-04";
-// let day = isDate();
-// let month;
-// let year;
-// const splitedArr = today.split("-");
-// const addDay = () => {
-//   for (let i = 0; i < splitedArr.length; i++) {}
-// };
-// console.log(day);
+// function addDaysToDate(inputDate, numberOfDays) {
+//   const date = new Date(inputDate);
+//   date.setDate(date.getDate() + numberOfDays);
+//   const formattedDate = date.toISOString().split("T")[0];
+//   return formattedDate;
+// }
+// const entryDate = "2023-05-01";
+// const daysToAdd = 10;
 
-function addDaysToDate(inputDate, numberOfDays) {
-  const date = new Date(inputDate);
-  date.setDate(date.getDate() + numberOfDays);
-  const formattedDate = date.toISOString().split("T")[0];
-  return formattedDate;
-}
-const entryDate = "2023-05-01";
-const daysToAdd = 100;
-
-const releaseDate = addDaysToDate(entryDate, daysToAdd);
-console.log("Entry:", entryDate);
-console.log("Release:", releaseDate);
+// const releaseDate = addDaysToDate(entryDate, daysToAdd);
+// console.log(entryDate);
+// console.log(releaseDate);

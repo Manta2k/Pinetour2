@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px 50px;
+}
+.mainCon {
+  height: 550px;
+  width: 450px;
+  border: 3px solid gray;
+  border-radius: 20px;
+}
+.inner1 {
+  width: auto;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+}
+.inner2 {
+  width: auto;
+  height: 40%;
+  border-top: 2px solid gray;
+  padding: 20px;
+}
+.firstname {
+  font-weight: bold;
+  font-size: 29px;
+}
+.lastname {
+  font-size: 25px;
+}
+.employment {
+  font-size: 25px;
+}
+.gender {
+  font-size: 25px;
+}
+.email {
+  font-size: 25px;
+}
+img {
+  margin-top: 30px;
+}
