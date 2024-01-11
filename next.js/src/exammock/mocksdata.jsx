@@ -1,4 +1,4 @@
-const mockData = [
+export const mockData = [
   {
     id: 553,
     uid: "8196198e-c185-412e-ac7f-8108fa6a5bcb",
@@ -314,19 +314,3 @@ const mockData = [
     },
   },
 ];
-const mainBody = document.getElementsByTagName("body")[0];
-const mockdataLength = () => {
-  mockData.map((el, i) => {
-    const mainCon = document.createElement("div");
-    mainCon.classList.add("mainCon");
-    mainBody.appendChild(mainCon);
-    mainCon.innerHTML = `<div class="inner1"><img src="${el.avatar}" 
-    alt=""></div><div class="inner2">
-  <div class="firstname">Firstname: ${el.first_name}</div>
-  <div class="lastname">Lastname: ${el.last_name}</div>
-  <div class="employment">Employment: ${el.employment.title}</div>
-  <div class="gender">Gender: ${el.gender}</div>
-  <div class="email">Email: ${el.email}</div></div>`;
-  });
-};
-mockdataLength();
