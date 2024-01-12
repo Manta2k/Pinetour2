@@ -1,4 +1,4 @@
-import { mockData } from "./mocksdata";
+import { mockData } from "../Mockdatas.jsx/mocksdata";
 export const styles = {
   Maindiv: {
     height: "550px",
@@ -42,11 +42,7 @@ export const Maincontainer = () => {
       <div style={styles.inner2}>
         <div style={styles.firstname}>Firstname: {el.first_name}</div>
         <div style={styles.lastname}>Lastname: {el.last_name}</div>
-        <div style={styles.employment}>
-          Employment:
-          <div>Title: {el.employment.title}</div>
-          <div>Key Skill: {el.employment.key_skill}</div>
-        </div>
+        <div style={styles.employment}>Employment:</div>
         <div style={styles.gender}>Gender: {el.gender}</div>
         <div style={styles.email}>Email: {el.email}</div>
       </div>

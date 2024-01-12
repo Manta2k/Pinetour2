@@ -1,0 +1,21 @@
+.line {
+  display: flex;
+  gap: 20px;
+}
+.oneBlock {
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  border: 2px solid gray;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.oneBlock:hover {
+  border-color: black;
+  transform: scale(1.1);
+  transform: rotate(360deg);
+}
