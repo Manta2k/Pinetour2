@@ -19,7 +19,7 @@ export default function Home() {
         <MainContainer data={mockData} />
       </div>
       <div>
-        <div onClick={() => Onoff} style={styles.onoff}>
+        <div>
           <Onoff></Onoff>
         </div>
       </div>

@@ -39,10 +39,6 @@ export const styles = {
   email: {
     fontSize: "22px",
   },
-  onoff: {
-    height: "100px",
-    width: "200px",
-  },
 };
 
 export const InnerContainer = ({
