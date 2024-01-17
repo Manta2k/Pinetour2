@@ -22,6 +22,7 @@ export default function Home() {
         <div>
           <Onoff></Onoff>
         </div>
+        <div className="flex justify-center">asdfdsa</div>
       </div>
     </div>
   );
