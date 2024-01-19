@@ -1,6 +1,6 @@
 export const MockParagraph = [
   {
-    Intro_P1: ` I'm a full stack developer (React.js & Node.js) with a focus on
+    About_P1: ` I'm a full stack developer (React.js & Node.js) with a focus on
     creating and occasionally designing exceptional digital
     experiences that are fast, accessible, visually appealing, and
     responsive. Even though I have been creating web applications for
@@ -18,7 +18,7 @@ export const MockParagraph = [
     writing clear, readable, highly performant code matters to me.`,
   },
   {
-    About_P2: ` I began my journey as a web developer in 2015, and since then,
+    About_P1: ` I began my journey as a web developer in 2015, and since then,
     I've continued to grow and evolve as a developer, taking on new
     challenges and learning the latest technologies along the way.
     Now, in my early thirties, 7 years after starting my web
@@ -27,17 +27,17 @@ export const MockParagraph = [
     Tailwindcss, Supabase and much more.`,
   },
   {
-    About_P3: `I am very much a progressive thinker and enjoy working on products
+    About_P1: `I am very much a progressive thinker and enjoy working on products
   end to end, from ideation all the way to development.`,
   },
   {
-    About_P4: `  When I'm not in full-on developer mode, you can find me hovering
+    About_P1: `  When I'm not in full-on developer mode, you can find me hovering
   around on twitter or on indie hacker, witnessing the journey of
   early startups or enjoying some free time. You can follow me on
   Twitter where I share tech-related bites and build in public, or
   you can follow me on GitHub.`,
   },
   {
-    About_P5: `Finally, some quick bits about me.`,
+    About_P1: `Finally, some quick bits about me.`,
   },
 ];
