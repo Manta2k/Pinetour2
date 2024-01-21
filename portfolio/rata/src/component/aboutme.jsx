@@ -1,5 +1,6 @@
 import { Minititle } from "./Minititle";
 import { LoopPara } from "./LoopPara";
+
 import { MockParagraph } from "@/datas/ParagraphData";
 export const Aboutme = () => {
   return (

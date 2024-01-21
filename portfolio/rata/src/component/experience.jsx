@@ -1,3 +1,5 @@
+import { DataExprience } from "@/datas/DataofExperience";
+import { LoopedExperience } from "./LoopedExperience";
 export const Experience = () => {
   return (
     <div className="container">
@@ -5,6 +7,7 @@ export const Experience = () => {
         <h1 className="text-gray-600 text-[25px] mt-[130px]">
           Here is a quick summary of my most recent experiences:
         </h1>
+        <LoopedExperience Edata={DataExprience} />
       </div>
     </div>
   );

@@ -1,4 +1,8 @@
-import { Paragraph } from "./Paragraph";
 export const LoopPara = ({ data }) => {
   return data.map((el, i) => <Paragraph key={i} {...el} />);
+};
+export const Paragraph = ({ About_P1 }) => {
+  return (
+    <p className="w-[1000px] leading-7 text-gray-700 mt-[35px]">{About_P1}</p>
+  );
 };
