@@ -1,7 +1,7 @@
 export const Intro = () => {
   return (
     <>
-      <div className="container">
+      <div className="container mb-[70px]">
         <div className="flex justify-center group *:mr-[30px] *:text-[20px] mt-[20px] text-gray-600 h-[40px]">
           <div className="">About</div>
           <div className="">Work</div>

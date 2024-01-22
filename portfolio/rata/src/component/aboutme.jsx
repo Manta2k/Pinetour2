@@ -5,8 +5,8 @@ import { MockParagraph } from "@/datas/ParagraphData";
 export const Aboutme = () => {
   return (
     <>
-      <div className="container">
-        <div className="h-screen bg-slate-50">
+      <div className="h-screen w-full bg-slate-50">
+        <div className="container">
           <div className="flex flex-col items-center">
             <Minititle></Minititle>
           </div>

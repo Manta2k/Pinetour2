@@ -4,7 +4,7 @@ export const DataExprience = [
     Logo: <Upwork />,
     Header: "Sr. Frontend Developer",
     List: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Ut pretium arcu et massa semper, id fringilla leo semper.Sed quis justo ac magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
+    Ut pretium arcu et massa semper, id fringilla leo semper.Sed quis justo ac magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Ut pretium arcu et massa semper, id fringilla leo semper.Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
     Date: "Nov 2021 - Present",
   },
   {
