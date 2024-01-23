@@ -3,16 +3,16 @@ import { LoopedWork } from "./LoopedWork";
 import { Data_Work } from "@/datas/DataOfWork";
 export const Work = () => {
   return (
-    <div className="container">
-      <div className="flex flex-col items-center bg-white">
+    <div id="work" className="flex flex-col items-center bg-white container">
+      <div className="mt-[80px]">
         <Minititle />
-        <h3 className="text-gray-600 text-[25px] mt-[100px]">
-          Some of the noteworthy projects I have built:
-        </h3>
-        <LoopedWork wData={Data_Work} />
-        <LoopedWork wData={Data_Work} />
-        <LoopedWork wData={Data_Work} />
       </div>
+      <h3 className="text-gray-600 text-[25px] mt-[80px]">
+        Some of the noteworthy projects I have built:
+      </h3>
+      <LoopedWork wData={Data_Work} />
+      <LoopedWork wData={Data_Work} />
+      <LoopedWork wData={Data_Work} />
     </div>
   );
 };

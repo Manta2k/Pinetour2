@@ -1,26 +1,75 @@
 export const Intro = () => {
   return (
     <>
-      <div className="container mb-[70px]">
-        <div className="flex justify-center group *:mr-[30px] *:text-[20px] mt-[20px] text-gray-600 h-[40px]">
-          <div className="">About</div>
-          <div className="">Work</div>
-          <div className="">Testimonials</div>
-          <div className="">Contact</div>
-          <img src="darkmode.png" alt="" className="h-[25px]" />
+      <div id="top" className="mb-[70px] cursor-pointer">
+        <div className="flex justify-center items-center group *:mr-[30px] *:text-[20px] text-gray-600 h-[70px] fixed backdrop-blur-lg top-0 w-[100%] container">
+          <div
+            onClick={() => {
+              const top = document.getElementById("top");
+              top.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="font-bold"
+          >
+            &lt;SS/&gt;
+          </div>
+          <div
+            className="cursor-pointer"
+            onClick={() => {
+              const about = document.getElementById("about");
+              about.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            About
+          </div>
+          <div
+            onClick={() => {
+              const work = document.getElementById("work");
+              work.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="cursor-pointer"
+          >
+            Work
+          </div>
+          <div
+            onClick={() => {
+              const skill = document.getElementById("skill");
+              skill.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="cursor-pointer"
+          >
+            Skill
+          </div>
+          <div
+            onClick={() => {
+              const experience = document.getElementById("experience");
+              experience.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="cursor-pointer"
+          >
+            Experience
+          </div>
+          <div
+            onClick={() => {
+              const contact = document.getElementById("contact");
+              contact.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="cursor-pointer"
+          >
+            Contact
+          </div>
+          <img src="darkmode.png" alt="" className="h-[25px] cursor-pointer" />
 
-          <div className="flex justify-center items-center bg-black text-white w-[150px] rounded-lg">
+          <div className="flex justify-center items-center bg-black text-white w-[150px] rounded-lg cursor-pointer">
             Download CV
           </div>
         </div>
-        <div className="flex justify-around mt-[100px]">
-          <div className="pt-[60px] pl-[100px]">
+        <div className="flex justify-around mt-[100px] h-[50%] container">
+          <div className="pt-[60px] w-[70%] ml-[30px]">
             <div>
               <h1 className="text-[55px] font-bold ">
-                {" "}
                 HI &#128513; Bayar-Erdene
               </h1>
-              <p className="w-[1000px] leading-7 text-gray-700 mt-[35px]">
+              <p className="flex flex-wrap leading-7 text-gray-700 mt-[35px]">
                 I'm a full stack developer (React.js & Node.js) with a focus on
                 creating (and occasionally designing) exceptional digital
                 experiences that are fast, accessible, visually appealing, and
@@ -48,7 +97,7 @@ export const Intro = () => {
               </div>
             </div>
           </div>
-          <img src="profile.png" alt="" className="w-[500px]" />
+          <img src="profile.png" alt="" className="w-[30%] mt-[60px]" />
         </div>
       </div>
     </>
