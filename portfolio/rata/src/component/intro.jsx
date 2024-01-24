@@ -1,14 +1,26 @@
+import { useState } from "react";
 export const Intro = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const handleDarkModeToggle = () => {
+    setIsDarkMode((prevMode) => !prevMode);
+  };
   return (
     <>
-      <div id="top" className="mb-[70px] cursor-pointer">
+      <div
+        id="top"
+        className={`mb-[70px] ${
+          isDarkMode
+            ? "dark:bg-gray-800 dark:text-white"
+            : "bg-slate-50 text-gray-600"
+        }`}
+      >
         <div className="flex justify-center items-center group *:mr-[30px] *:text-[20px] text-gray-600 h-[70px] fixed backdrop-blur-lg top-0 w-[100%] container">
           <div
             onClick={() => {
               const top = document.getElementById("top");
               top.scrollIntoView({ behavior: "smooth" });
             }}
-            className="font-bold"
+            className="font-bold cursor-pointer"
           >
             &lt;SS/&gt;
           </div>
@@ -57,9 +69,14 @@ export const Intro = () => {
           >
             Contact
           </div>
-          <img src="darkmode.png" alt="" className="h-[25px] cursor-pointer" />
+          <img
+            src={isDarkMode ? "darkmode-on.png" : "darkmode-off.png"}
+            alt="Dark Mode"
+            className="h-[25px] cursor-pointer"
+            onClick={handleDarkModeToggle}
+          />
 
-          <div className="flex justify-center items-center bg-black text-white w-[150px] rounded-lg cursor-pointer">
+          <div className="flex justify-center items-center bg-black text-white w-[150px] rounded-lg cursor-pointer ">
             Download CV
           </div>
         </div>
@@ -85,8 +102,11 @@ export const Intro = () => {
                   <img src="location.png" alt="" className="mr-[5px]" />
                   Ulaanbaatar, Mongolia
                 </div>
-                <div className="flex h-[30px] items-center">
-                  <div className="w-[10px] h-[10px] rounded-full bg-green-500 mr-[10px] ml-[6px]"></div>
+                <div className="flex h-[30px] items-center ml-[6px]">
+                  <span class="relative flex h-3 w-3 mr-[9px]">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-400"></span>
+                  </span>
                   Available for new projects
                 </div>
                 <div className="flex gap-x-[10px] mt-[50px]">

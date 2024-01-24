@@ -6,7 +6,7 @@ export const Aboutme = () => {
     <>
       <div
         id="about"
-        className="flex flex-col items-center h-full w-[100%] bg-slate-50 container p-[100px]"
+        className={`flex flex-col items-center h-full w-[100%] bg-slate-50 container p-[100px] `}
       >
         <div>
           <Minititle />
