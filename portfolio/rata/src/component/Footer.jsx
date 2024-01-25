@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <div className="flex justify-center bg-gray-100 w-screen h-[100px]">
+    <div className="flex justify-center bg-gray-100 w-screen h-[100px] dark:bg-slate-800">
       <div className="flex justify-center items-center container">
         <div>
           <svg
@@ -38,7 +38,7 @@ export const Footer = () => {
             </defs>
           </svg>
         </div>
-        <div className="ml-[10px]">
+        <div className="ml-[10px] dark:text-slate-300">
           2023 | Designed and coded with ❤️️ by BAYAR-ERDENE
         </div>
       </div>

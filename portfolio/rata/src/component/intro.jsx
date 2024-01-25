@@ -1,31 +1,34 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 export const Intro = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  useEffect(() => {
+    const savedDark = localStorage.getItem("darkMode") === "true";
+    setIsDarkMode(savedDark);
+    document.documentElement.classList.toggle("dark", savedDark);
+  }, []);
   const handleDarkModeToggle = () => {
-    setIsDarkMode((prevMode) => !prevMode);
+    setIsDarkMode((prevMode) => {
+      const newMode = !prevMode;
+      localStorage.setItem("darkMode", newMode.toString());
+      document.documentElement.classList.toggle("dark", newMode);
+      return newMode;
+    });
   };
   return (
     <>
-      <div
-        id="top"
-        className={`mb-[70px] ${
-          isDarkMode
-            ? "dark:bg-gray-800 dark:text-white"
-            : "bg-slate-50 text-gray-600"
-        }`}
-      >
+      <div id="top" className={`mb-[70px] `}>
         <div className="flex justify-center items-center group *:mr-[30px] *:text-[20px] text-gray-600 h-[70px] fixed backdrop-blur-lg top-0 w-[100%] container">
           <div
             onClick={() => {
               const top = document.getElementById("top");
               top.scrollIntoView({ behavior: "smooth" });
             }}
-            className="font-bold cursor-pointer"
+            className="font-bold cursor-pointer dark:text-white"
           >
             &lt;SS/&gt;
           </div>
           <div
-            className="cursor-pointer"
+            className="cursor-pointer dark:text-white"
             onClick={() => {
               const about = document.getElementById("about");
               about.scrollIntoView({ behavior: "smooth" });
@@ -38,7 +41,7 @@ export const Intro = () => {
               const work = document.getElementById("work");
               work.scrollIntoView({ behavior: "smooth" });
             }}
-            className="cursor-pointer"
+            className="cursor-pointer dark:text-white"
           >
             Work
           </div>
@@ -47,7 +50,7 @@ export const Intro = () => {
               const skill = document.getElementById("skill");
               skill.scrollIntoView({ behavior: "smooth" });
             }}
-            className="cursor-pointer"
+            className="cursor-pointer dark:text-white"
           >
             Skill
           </div>
@@ -56,7 +59,7 @@ export const Intro = () => {
               const experience = document.getElementById("experience");
               experience.scrollIntoView({ behavior: "smooth" });
             }}
-            className="cursor-pointer"
+            className="cursor-pointer dark:text-white"
           >
             Experience
           </div>
@@ -65,24 +68,24 @@ export const Intro = () => {
               const contact = document.getElementById("contact");
               contact.scrollIntoView({ behavior: "smooth" });
             }}
-            className="cursor-pointer"
+            className="cursor-pointer dark:text-white"
           >
             Contact
           </div>
           <img
-            src={isDarkMode ? "darkmode-on.png" : "darkmode-off.png"}
+            src={isDarkMode ? "darkmode-off.png" : "darkmode-on.png"}
             alt="Dark Mode"
             className="h-[25px] cursor-pointer"
             onClick={handleDarkModeToggle}
           />
 
-          <div className="flex justify-center items-center bg-black text-white w-[150px] rounded-lg cursor-pointer ">
+          <div className="flex justify-center items-center bg-black text-white w-[150px] rounded-lg cursor-pointer dark:bg-slate-100 dark:text-black">
             Download CV
           </div>
         </div>
         <div className="flex justify-around mt-[100px] h-[50%] container">
-          <div className="pt-[60px] w-[70%] ml-[30px]">
-            <div>
+          <div className="pt-[60px] w-[70%] pl-[120px]">
+            <div className="mb-[80px]">
               <h1 className="text-[55px] font-bold ">
                 HI &#128513; Bayar-Erdene
               </h1>
@@ -117,7 +120,7 @@ export const Intro = () => {
               </div>
             </div>
           </div>
-          <img src="profile.png" alt="" className="w-[30%] mt-[60px]" />
+          <img src="profile.png" alt="" className="w-[25%] mt-[60px]" />
         </div>
       </div>
     </>
