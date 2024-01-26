@@ -6,7 +6,7 @@ export const Skills = () => {
     <>
       <div
         id="skill"
-        className="flex flex-col items-center h-[700px] container"
+        className="flex flex-col items-center container mb-[140px]"
       >
         <div className="mt-[80px]">
           <Minititle />
@@ -14,7 +14,7 @@ export const Skills = () => {
         <h1 className=" text-gray-600 text-[25px] mt-[80px]">
           The skills, tools and technologies I am really good at:
         </h1>
-        <div className="grid-cols-8 grid-rows-2 grid gap-y-[40px] gap-x-[40px] mt-[60px]">
+        <div className="grid-cols-8 grid-rows-2 grid gap-y-[40px] gap-x-[40px] mt-[60px] max-md:flex max-md:flex-wrap">
           <LoopedIcon iconData={Icons} />
         </div>
       </div>

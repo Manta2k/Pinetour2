@@ -39,7 +39,11 @@ export const Icons = [
   },
   {
     Name: "Express.js",
-    Logo: <Express />,
+    Logo: (
+      <div className="dark:bg-white">
+        <Express />
+      </div>
+    ),
   },
   {
     Name: "Nest.js",
@@ -47,7 +51,11 @@ export const Icons = [
   },
   {
     Name: "Socket.io",
-    Logo: <Socket />,
+    Logo: (
+      <div className="dark:bg-white">
+        <Socket />
+      </div>
+    ),
   },
   {
     Name: "PostgreSQL",

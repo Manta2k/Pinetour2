@@ -5,7 +5,7 @@ export const Work = () => {
   return (
     <div
       id="work"
-      className="flex flex-col items-center bg-white container dark:bg-slate-900 dark:text-white"
+      className="flex flex-col items-center bg-white container dark:bg-black dark:text-white mb-[100px]"
     >
       <div className="mt-[80px]">
         <Minititle />

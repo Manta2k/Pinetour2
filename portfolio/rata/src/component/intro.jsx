@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+
 export const Intro = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   useEffect(() => {
@@ -14,10 +15,11 @@ export const Intro = () => {
       return newMode;
     });
   };
+
   return (
     <>
       <div id="top" className={`mb-[70px] `}>
-        <div className="flex justify-center items-center group *:mr-[30px] *:text-[20px] text-gray-600 h-[70px] fixed backdrop-blur-lg top-0 w-[100%] container">
+        <div className="flex justify-center items-center group *:mr-[30px] *:text-[20px] text-gray-600 h-[70px] fixed backdrop-blur-lg top-0 w-[100%] container max-md:flex max-md:justify-start">
           <div
             onClick={() => {
               const top = document.getElementById("top");
@@ -27,8 +29,9 @@ export const Intro = () => {
           >
             &lt;SS/&gt;
           </div>
+          <div></div>
           <div
-            className="cursor-pointer dark:text-white"
+            className="cursor-pointer dark:text-white max-md:hidden"
             onClick={() => {
               const about = document.getElementById("about");
               about.scrollIntoView({ behavior: "smooth" });
@@ -41,7 +44,7 @@ export const Intro = () => {
               const work = document.getElementById("work");
               work.scrollIntoView({ behavior: "smooth" });
             }}
-            className="cursor-pointer dark:text-white"
+            className="cursor-pointer dark:text-white max-md:hidden"
           >
             Work
           </div>
@@ -50,7 +53,7 @@ export const Intro = () => {
               const skill = document.getElementById("skill");
               skill.scrollIntoView({ behavior: "smooth" });
             }}
-            className="cursor-pointer dark:text-white"
+            className="cursor-pointer dark:text-white max-md:hidden"
           >
             Skill
           </div>
@@ -59,7 +62,7 @@ export const Intro = () => {
               const experience = document.getElementById("experience");
               experience.scrollIntoView({ behavior: "smooth" });
             }}
-            className="cursor-pointer dark:text-white"
+            className="cursor-pointer dark:text-white max-md:hidden"
           >
             Experience
           </div>
@@ -68,28 +71,29 @@ export const Intro = () => {
               const contact = document.getElementById("contact");
               contact.scrollIntoView({ behavior: "smooth" });
             }}
-            className="cursor-pointer dark:text-white"
+            className="cursor-pointer dark:text-white max-md:hidden"
           >
             Contact
           </div>
           <img
             src={isDarkMode ? "darkmode-off.png" : "darkmode-on.png"}
             alt="Dark Mode"
-            className="h-[25px] cursor-pointer"
+            className="animate-spin h-[25px] cursor-pointer max-md:hidden"
             onClick={handleDarkModeToggle}
           />
 
-          <div className="flex justify-center items-center bg-black text-white w-[150px] rounded-lg cursor-pointer dark:bg-slate-100 dark:text-black">
+          <div className="flex justify-center items-center bg-black text-white w-[150px] rounded-lg cursor-pointer dark:bg-slate-100 dark:text-black shadow-lg dark:shadow-indigo-500 max-md:hidden">
             Download CV
           </div>
+          <div className="invisible max-md:visible">sad</div>
         </div>
-        <div className="flex justify-around mt-[100px] h-[50%] container">
-          <div className="pt-[60px] w-[70%] pl-[120px]">
+        <div className="flex justify-around mt-[100px] h-[50%] container max-md:flex-col-reverse max-md:items-center">
+          <div className="pt-[60px] w-[65%] pl-[120px] max-md:w-full max-md:p-0">
             <div className="mb-[80px]">
-              <h1 className="text-[55px] font-bold ">
+              <h1 className="text-[55px] font-bold max-md:text-[30px]">
                 HI &#128513; Bayar-Erdene
               </h1>
-              <p className="flex flex-wrap leading-7 text-gray-700 mt-[35px]">
+              <p className="flex flex-wrap leading-7 text-gray-700 mt-[35px] dark:text-slate-300">
                 I'm a full stack developer (React.js & Node.js) with a focus on
                 creating (and occasionally designing) exceptional digital
                 experiences that are fast, accessible, visually appealing, and
@@ -102,12 +106,16 @@ export const Intro = () => {
               </p>
               <div className="">
                 <div className="flex mt-[50px]">
-                  <img src="location.png" alt="" className="mr-[5px]" />
+                  <img
+                    src="location.png"
+                    alt=""
+                    className="animate-bounce mr-[5px]"
+                  />
                   Ulaanbaatar, Mongolia
                 </div>
                 <div className="flex h-[30px] items-center ml-[6px]">
                   <span class="relative flex h-3 w-3 mr-[9px]">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-100"></span>
                     <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-400"></span>
                   </span>
                   Available for new projects
@@ -120,7 +128,13 @@ export const Intro = () => {
               </div>
             </div>
           </div>
-          <img src="profile.png" alt="" className="w-[25%] mt-[60px]" />
+          <div className="flex justify-center box-content w-[35%] max-md:w-[75%]">
+            <img
+              src="profile.gif"
+              alt=""
+              className=" mt-[60px] size-[75%] rounded-lg"
+            />
+          </div>
         </div>
       </div>
     </>
