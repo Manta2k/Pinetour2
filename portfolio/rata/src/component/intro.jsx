@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-
 export const Intro = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   useEffect(() => {
@@ -15,11 +14,27 @@ export const Intro = () => {
       return newMode;
     });
   };
+  const [showMenu, setShowMenu] = useState(false);
+  const [showSideBar, setshowSideBar] = useState(false);
 
+  const handleOpen = () => {
+    setShowMenu(!showMenu);
+
+    setTimeout(() => {
+      setshowSideBar(!showSideBar);
+    }, 10);
+  };
+
+  const handleClose = () => {
+    setshowSideBar(!showSideBar);
+    setTimeout(() => {
+      setShowMenu(!showMenu);
+    }, 400);
+  };
   return (
     <>
       <div id="top" className={`mb-[70px] `}>
-        <div className="flex justify-center items-center group *:mr-[30px] *:text-[20px] text-gray-600 h-[70px] fixed backdrop-blur-lg top-0 w-[100%] container max-md:flex max-md:justify-start">
+        <div className="flex justify-center items-center group *:mr-[30px] *:text-[20px] text-gray-600 h-[70px] fixed backdrop-blur-lg top-0 w-[100%] container max-md:flex max-md:justify-between max-md:*:m-0">
           <div
             onClick={() => {
               const top = document.getElementById("top");
@@ -85,10 +100,48 @@ export const Intro = () => {
           <div className="flex justify-center items-center bg-black text-white w-[150px] rounded-lg cursor-pointer dark:bg-slate-100 dark:text-black shadow-lg dark:shadow-indigo-500 max-md:hidden">
             Download CV
           </div>
-          <div className="invisible max-md:visible">sad</div>
+          <div className=" invisible h-[100%] flex justify-between items-center relative max-md:visible">
+            <div onClick={handleOpen} className="">
+              {"Pinecone "}
+            </div>
+          </div>
+          {showMenu && (
+            <div>
+              <div
+                onClick={handleClose}
+                className={` ${
+                  showSideBar && "bg-black"
+                }  bg-opacity-30 w-[100vw] h-[100vh] absolute left-0 top-0 transition-all duration-300  ease-in-out`}
+              ></div>
+
+              {/* Side barnii tsagaan contenttei heseg */}
+              <div className="absolute top-0 right-0 overflow-hidden w-[70vw] h-[100vh]">
+                <div
+                  className={`bg-white h-[100%] w-[100%] p-5 absolute top-0 right-0 ${
+                    showSideBar ? "translate-x-0" : "translate-x-[100vw]"
+                  } transition-all duration-300  ease-in-out`}
+                >
+                  <div className="flex justify-between">
+                    <h2>Pinecone</h2>
+                    <button
+                      onClick={handleClose}
+                      className="h-[40px] w-[40px] border-red-300 rounded-md border-[2px]"
+                    >
+                      X
+                    </button>
+                  </div>
+                  <div>
+                    <h4>Hello</h4>
+                    <h4>Pinecone</h4>
+                    <h4>Admin</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
         <div className="flex justify-around mt-[100px] h-[50%] container max-md:flex-col-reverse max-md:items-center">
-          <div className="pt-[60px] w-[65%] pl-[120px] max-md:w-full max-md:p-0">
+          <div className="pt-[60px] w-[65%] pl-[120px] max-md:w-[80%] max-md:p-0">
             <div className="mb-[80px]">
               <h1 className="text-[55px] font-bold max-md:text-[30px]">
                 HI &#128513; Bayar-Erdene

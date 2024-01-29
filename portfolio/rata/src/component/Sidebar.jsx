@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Sidebar = () => {
+export const Sidebar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [showSideBar, setshowSideBar] = useState(false);
 
@@ -21,7 +21,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className=" h-[100vh] p-3 flex justify-between relative">
+      <div className=" invisible h-[100vh] p-3 flex justify-between relative max-md:visible">
         <div>Pine cone </div>
         <button
           onClick={handleOpen}
@@ -67,5 +67,3 @@ const Sidebar = () => {
     </>
   );
 };
-
-export default Sidebar;

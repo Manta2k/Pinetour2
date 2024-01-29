@@ -699,3 +699,18 @@
 // const releaseDate = addDaysToDate(entryDate, daysToAdd);
 // console.log(entryDate);
 // console.log(releaseDate);
+
+const height = [1, 8, 6, 2, 5, 4, 8, 3, 7];
+const maxArea = (height) => {
+  let biggestArea = 0;
+  for (let i = 0; i < height.length - 1; i++) {
+    for (let j = i + 1; j < height.length; j++) {
+      const maxHeight = Math.min(height[i], height[j]);
+      //   const currentArea = maxHeight * (j - i);
+      //   biggestArea = Math.max(biggestArea, currentArea);
+    }
+  }
+  return biggestArea;
+};
+const hariu = maxArea(height);
+console.log(hariu);

@@ -105,7 +105,6 @@
         </div>
       </div>
     </div>
-    <!-- body  section 2-->
     <div class="section2">
       <div
         class="gogostory font-size-30 color-black mg-top-30px dis-flex j-content-fstart"
@@ -113,5 +112,16 @@
         <h2 class="t-align-l">GOGO</h2>
       </div>
     </div>
+
+    <div style="height: 1000px"></div>
+    <button onclick="scrollDown()">Scroll Down</button>
+    <script>
+      function scrollDown() {
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: "smooth",
+        });
+      }
+    </script>
   </body>
 </html>
