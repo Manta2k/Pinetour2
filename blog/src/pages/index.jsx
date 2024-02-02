@@ -10,6 +10,7 @@ export default function Home() {
   const [trendingArticles, setTrendingArticles] = useState([]);
   const [blogArticles, setBlogArticles] = useState([]);
   const [perPage, setPerPage] = useState(9);
+
   const fetchData = async () => {
     try {
       const topResponse = await fetch(
@@ -28,8 +29,7 @@ export default function Home() {
 
       setTopArticles(topData);
       setTrendingArticles(trendingData);
-      setBlogArticles((prevArticles) => [...prevArticles, ...blogData]);
-      setPerPage(blogData);
+      setBlogArticles(blogData);
     } catch (error) {
       console.log(error);
     }
@@ -38,6 +38,7 @@ export default function Home() {
   useEffect(() => {
     fetchData();
   }, [perPage]);
+
   const handleLoadMore = () => {
     setPerPage((prevPerPage) => prevPerPage + 3);
   };

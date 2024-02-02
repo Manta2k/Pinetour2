@@ -23,7 +23,7 @@ export const BigContainer = ({ bigData }) => {
 };
 export const LoopImgBig = ({
   social_image,
-  tags,
+  tag_list,
   title,
   readable_publish_date,
 }) => {
@@ -35,9 +35,11 @@ export const LoopImgBig = ({
       >
         <div className="flex flex-col items-start h-[250px] w-[47%] bg-white rounded-2xl ml-[10px] mb-[10px]  p-[25px]">
           <div className="flex justify-center items-center h-[35px] bg-indigo-700 rounded-lg text-white px-[10px]">
-            {tags}
+            {tag_list}
           </div>
-          <div className="text-[35px] font-semibold">{title}</div>
+          <div className="text-[35px] font-semibold cursor-pointer">
+            {title}
+          </div>
           <div className=" text-slate-300">{readable_publish_date}</div>
         </div>
       </div>

@@ -63,7 +63,7 @@ export default function Contact() {
                 className=" flex flex-wrap border-[1px] border-solid border-gray-300 rounded-md w-[85%] p-[5px] h-[150px]"
               />
             </div>
-            <div className=" flex justify-center items-center h-[35px] bg-indigo-700 rounded-lg text-white p-[8px] w-[20%] mt-[15px]">
+            <div className=" flex justify-center items-center h-[35px] bg-indigo-700 rounded-lg text-white p-[8px] w-[20%] mt-[15px] cursor-pointer">
               Send Message
             </div>
           </div>
