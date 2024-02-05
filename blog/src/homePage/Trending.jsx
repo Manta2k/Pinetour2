@@ -1,10 +1,13 @@
-export const Trending = ({ trend }) => {
+import { useContext } from "react";
+import { AllDataContext } from "@/context/firstContext";
+export const Trending = () => {
+  const { trendingArticles } = useContext(AllDataContext);
   return (
     <div className="flex justify-center w-full mt-[100px]">
       <div className="flex flex-col w-[70%] container">
         <div className="font-semibold text-[25px]">Trending</div>
         <div className="flex h-[450px] w-[100%] gap-[30px]">
-          {trend.map((el, i) => (
+          {trendingArticles.map((el, i) => (
             <LoopTrend key={i} {...el} />
           ))}
         </div>

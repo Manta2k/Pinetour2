@@ -1,11 +1,13 @@
 import { LeftSlide, RightSlide } from "@/DataBlog/DataOficon";
-import { useState } from "react";
-export const BigContainer = ({ bigData }) => {
+import { useContext } from "react";
+import { AllDataContext } from "@/context/firstContext";
+export const BigContainer = () => {
+  const { topArticles } = useContext(AllDataContext);
   return (
     <div className="flex flex-col items-center w-full h-[700px] mt-[50px] gap-y-[15px]">
       <div className="flex justify-center w-[70%] h-[100%]">
-        <div className="w-[100%] carousel">
-          {bigData.map((el, i) => (
+        <div className="w-[100%] carousel ">
+          {topArticles.map((el, i) => (
             <LoopImgBig key={i} {...el} />
           ))}
         </div>

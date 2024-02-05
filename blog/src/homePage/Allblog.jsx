@@ -1,10 +1,13 @@
-export const Allblog = ({ content, handleLoadMore }) => {
+import { useContext } from "react";
+import { AllDataContext } from "@/context/firstContext";
+export const Allblog = () => {
+  const { filteredArray, handleLoadMore } = useContext(AllDataContext);
   return (
     <>
       <AllblogHeader />
       <div className=" flex flex-col items-center w-full mt-[100px] ">
         <div className=" flex flex-wrap gap-[2%] w-[70%] container">
-          {content.map((el) => (
+          {filteredArray.map((el) => (
             <div className=" flex flex-col w-[32%] border-solid border-[2px] border-gray-300 rounded-2xl p-[10px]">
               <img
                 src={el.cover_image}

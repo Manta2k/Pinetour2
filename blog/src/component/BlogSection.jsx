@@ -1,6 +1,9 @@
 import Link from "next/link";
-export const BlogSection = ({ content }) => {
-  return content.map((el) => {
+import { useContext } from "react";
+import { AllDataContext } from "@/context/firstContext";
+export const BlogSection = () => {
+  const { filteredArray } = useContext(AllDataContext);
+  return filteredArray.map((el) => {
     return (
       <div className=" flex flex-col w-[32%] border-solid border-[2px] border-gray-300 rounded-2xl p-[10px]">
         <img

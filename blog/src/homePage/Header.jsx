@@ -1,6 +1,9 @@
 import { Logo } from "@/DataBlog/DataOficon";
 import Link from "next/link";
-export const Header = ({ search }) => {
+import { useContext } from "react";
+import { AllDataContext } from "@/context/firstContext";
+export const Header = () => {
+  const { handleSearch } = useContext(AllDataContext);
   return (
     <div className="flex flex-row justify-center items-center h-[80px] w-full">
       <div className="flex justify-between container">
@@ -23,7 +26,7 @@ export const Header = ({ search }) => {
           placeholder="Search for anything..."
           type="text"
           name="search"
-          onChange={search}
+          onChange={handleSearch}
         />
       </div>
     </div>
