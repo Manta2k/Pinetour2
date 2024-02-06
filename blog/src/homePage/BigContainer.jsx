@@ -1,6 +1,7 @@
 import { LeftSlide, RightSlide } from "@/DataBlog/DataOficon";
 import { useContext } from "react";
 import { AllDataContext } from "@/context/firstContext";
+import Link from "next/link";
 export const BigContainer = () => {
   const { topArticles } = useContext(AllDataContext);
   return (
@@ -28,6 +29,7 @@ export const LoopImgBig = ({
   tag_list,
   title,
   readable_publish_date,
+  id,
 }) => {
   return (
     <>
@@ -39,9 +41,11 @@ export const LoopImgBig = ({
           <div className="flex justify-center items-center h-[35px] bg-indigo-700 rounded-lg text-white px-[10px]">
             {tag_list}
           </div>
-          <div className="text-[35px] font-semibold cursor-pointer">
-            {title}
-          </div>
+          <Link href={{ pathname: "/SinglePost", query: { id } }}>
+            <div className="text-[35px] font-semibold cursor-pointer hover:text-blue-600">
+              {title}
+            </div>
+          </Link>
           <div className=" text-slate-300">{readable_publish_date}</div>
         </div>
       </div>

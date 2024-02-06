@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AllDataContext } from "@/context/firstContext";
+import Link from "next/link";
 export const Trending = () => {
   const { trendingArticles } = useContext(AllDataContext);
   return (
@@ -15,7 +16,7 @@ export const Trending = () => {
     </div>
   );
 };
-export const LoopTrend = ({ cover_image, description, tags }) => {
+export const LoopTrend = ({ cover_image, description, tags, id }) => {
   return (
     <div
       className=" flex w-[25%] h-[80%] rounded-2xl  mt-[30px] p-[20px]"
@@ -25,7 +26,11 @@ export const LoopTrend = ({ cover_image, description, tags }) => {
         <div className="flex justify-center items-center h-[35px] bg-indigo-700 rounded-lg text-white px-[10px]">
           {tags}
         </div>
-        <div className="text-white font-semibold mt-[20px]">{description}</div>
+        <Link href={{ pathname: "/SinglePost", query: { id } }}>
+          <div className="text-white font-semibold mt-[20px] cursor-pointer hover:text-indigo-500">
+            {description}
+          </div>
+        </Link>
       </div>
     </div>
   );

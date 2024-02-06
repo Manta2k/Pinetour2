@@ -5,7 +5,7 @@ export const BlogSection = () => {
   const { filteredArray } = useContext(AllDataContext);
   return filteredArray.map((el) => {
     return (
-      <div className=" flex flex-col w-[32%] border-solid border-[2px] border-gray-300 rounded-2xl p-[10px]">
+      <div className=" flex flex-col w-[32%] border-solid border-[2px] border-gray-300 rounded-2xl p-[10px] mb-[2%]">
         <img
           src={el.cover_image}
           className="w-[100%] h-[55%] rounded-2xl"
@@ -15,8 +15,8 @@ export const BlogSection = () => {
           <div className="h-[30px] rounded-lg bg-slate-200 text-indigo-600 p-[5px]">
             {el.tags}
           </div>
-          <Link href="/SinglePost">
-            <div className="text-[25px] font-semibold cursor-pointer">
+          <Link href={{ pathname: "/SinglePost", query: { id: el.id } }}>
+            <div className="text-[25px] font-semibold cursor-pointer hover:text-blue-700">
               {el.title}
             </div>
           </Link>

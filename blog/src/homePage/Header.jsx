@@ -7,9 +7,11 @@ export const Header = () => {
   return (
     <div className="flex flex-row justify-center items-center h-[80px] w-full">
       <div className="flex justify-between container">
-        <div>
-          <Logo />
-        </div>
+        <Link href={"/"}>
+          <div>
+            <Logo />
+          </div>
+        </Link>
         <div className="flex justify-center items-center gap-x-[45px] *:cursor-pointer">
           <Link href="/">
             <div>Home</div>

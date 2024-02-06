@@ -14,10 +14,10 @@ export const AllData = ({ children }) => {
         `https://dev.to/api/articles?page=1&per_page=4`
       );
       const trendingResponse = await fetch(
-        `https://dev.to/api/articles?page=5&per_page=4`
+        `https://dev.to/api/articles?page=10&per_page=4`
       );
       const blogResponse = await fetch(
-        `https://dev.to/api/articles?page=3&per_page=${perPage}`
+        `https://dev.to/api/articles?page=5&per_page=${perPage}`
       );
 
       const topData = await topResponse.json();
@@ -38,6 +38,25 @@ export const AllData = ({ children }) => {
   const handleLoadMore = () => {
     setPerPage((prevPerPage) => prevPerPage + 3);
   };
+  const handleSearchTag = (tag) => {
+    let filteredArticles;
+
+    if (tag === "all") {
+      filteredArticles = blogArticles;
+    } else {
+      filteredArticles = blogArticles.filter((article) => {
+        if (Array.isArray(article.tag_list)) {
+          return article.tag_list.some(
+            (t) => t.toLowerCase() === tag.toLowerCase()
+          );
+        }
+        return false;
+      });
+    }
+
+    setFilteredArray(filteredArticles);
+  };
+
   const handleSearch = (event) => {
     console.log(event.target.value);
     const filteredArticles = blogArticles.filter((blogArticles) =>
@@ -56,6 +75,7 @@ export const AllData = ({ children }) => {
         handleLoadMore,
         filteredArray,
         handleSearch,
+        handleSearchTag,
       }}
     >
       {children}

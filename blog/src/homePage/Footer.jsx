@@ -11,7 +11,9 @@ export const Footer = () => {
       <div className="w-[70%] container">
         <div className="flex justify-between w-[100%] mt-[100px]">
           <div className="flex flex-col w-[30%] gap-[30px]">
-            <div className="font-semibold text-[25px]">About</div>
+            <div className="font-semibold text-[25px]">
+              About {`MADE BY BAYAR-ERDENE`}
+            </div>
             <div className=" text-gray-500 text-[20px] leading-[40px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
