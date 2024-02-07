@@ -27,7 +27,7 @@ export const LoopTrend = ({ cover_image, description, tags, id }) => {
           {tags}
         </div>
         <Link href={{ pathname: "/SinglePost", query: { id } }}>
-          <div className="text-white font-semibold mt-[20px] cursor-pointer hover:text-indigo-500">
+          <div className="text-white font-semibold mt-[20px] cursor-pointer hover:text-indigo-500 backdrop-blur-md rounded-xl">
             {description}
           </div>
         </Link>

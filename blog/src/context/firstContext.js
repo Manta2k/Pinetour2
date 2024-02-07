@@ -7,7 +7,7 @@ export const AllData = ({ children }) => {
   const [blogArticles, setBlogArticles] = useState([]);
   const [perPage, setPerPage] = useState(9);
   const [filteredArray, setFilteredArray] = useState(blogArticles);
-
+  const [selectedTag, setSelectedTag] = useState("all");
   const fetchData = async () => {
     try {
       const topResponse = await fetch(
@@ -17,7 +17,7 @@ export const AllData = ({ children }) => {
         `https://dev.to/api/articles?page=10&per_page=4`
       );
       const blogResponse = await fetch(
-        `https://dev.to/api/articles?page=5&per_page=${perPage}`
+        `https://dev.to/api/articles?page=27&per_page=${perPage}`
       );
 
       const topData = await topResponse.json();
@@ -40,7 +40,6 @@ export const AllData = ({ children }) => {
   };
   const handleSearchTag = (tag) => {
     let filteredArticles;
-
     if (tag === "all") {
       filteredArticles = blogArticles;
     } else {
@@ -53,7 +52,7 @@ export const AllData = ({ children }) => {
         return false;
       });
     }
-
+    setSelectedTag(tag);
     setFilteredArray(filteredArticles);
   };
 
@@ -76,6 +75,7 @@ export const AllData = ({ children }) => {
         filteredArray,
         handleSearch,
         handleSearchTag,
+        selectedTag,
       }}
     >
       {children}

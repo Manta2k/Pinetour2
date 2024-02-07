@@ -1,8 +1,15 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AllDataContext } from "@/context/firstContext";
 import Link from "next/link";
 export const Allblog = () => {
   const { filteredArray, handleLoadMore } = useContext(AllDataContext);
+  const [loading, setLoading] = useState(false);
+
+  const handleLoadMoreClick = async () => {
+    setLoading(true);
+    await handleLoadMore();
+    setLoading(false);
+  };
   return (
     <>
       <AllblogHeader />
@@ -28,11 +35,18 @@ export const Allblog = () => {
               </div>
             </div>
           ))}
+          {loading && (
+            <div className="flex justify-between w-[100%]">
+              <div className="skeleton w-96 h-96"></div>
+              <div className="skeleton w-96 h-96"></div>
+              <div className="skeleton w-96 h-96"></div>
+            </div>
+          )}
         </div>
         <div className="flex justify-center mt-[200px]">
           <div
-            onClick={handleLoadMore}
-            className=" flex justify-center items-center border-solid border-[2px] border-gray-300 rounded-md w-[150px] h-[40px] cursor-pointer p-[30px] text-white bg-indigo-600 shadow-lg"
+            onClick={handleLoadMoreClick}
+            className=" flex border-solid border-[2px] border-black rounded-md w-[150px] h-[40px] cursor-pointer p-[30px] text-white bg-indigo-600 shadow-2xl btn btn-primary"
           >
             Load More
           </div>
@@ -42,7 +56,7 @@ export const Allblog = () => {
   );
 };
 export const AllblogHeader = () => {
-  const { handleSearchTag } = useContext(AllDataContext);
+  const { handleSearchTag, selectedTag } = useContext(AllDataContext);
   return (
     <div className="flex justify-center w-full mt-[100px]">
       <div className="w-[70%] container">
@@ -50,25 +64,33 @@ export const AllblogHeader = () => {
         <div className="flex justify-between mt-[50px]">
           <div className="flex *:mr-[40px] *:text-gray-500 *:font-bold *:cursor-pointer">
             <div
-              className="hover:text-amber-600"
+              className={`hover:text-amber-600 ${
+                selectedTag === "all" ? "text-amber-600" : ""
+              }`}
               onClick={() => handleSearchTag("all")}
             >
               All
             </div>
             <div
-              className="hover:text-amber-600"
+              className={`hover:text-amber-600 ${
+                selectedTag === "javascript" ? "text-amber-600" : ""
+              }`}
               onClick={() => handleSearchTag("javascript")}
             >
               JavaScript
             </div>
             <div
-              className="hover:text-amber-600"
+              className={`hover:text-amber-600 ${
+                selectedTag === "typescript" ? "text-amber-600" : ""
+              }`}
               onClick={() => handleSearchTag("typescript")}
             >
               TypeScript
             </div>
             <div
-              className="hover:text-amber-600"
+              className={`hover:text-amber-600 ${
+                selectedTag === "programming" ? "text-amber-600" : ""
+              }`}
               onClick={() => handleSearchTag("programming")}
             >
               Programming

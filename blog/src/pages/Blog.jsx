@@ -19,7 +19,7 @@ export default function Blog() {
             <div className="flex justify-center mt-[150px]">
               <div
                 onClick={handleLoadMore}
-                className=" flex justify-center items-center border-solid border-[2px] border-gray-300 rounded-md w-[150px] h-[40px] cursor-pointer p-[30px] text-white bg-indigo-600 shadow-lg"
+                className=" flex justify-center items-center border-solid border-[2px] border-black rounded-md w-[150px] h-[40px] cursor-pointer p-[30px] text-white bg-indigo-600 shadow-2xl transition ease-in-out delay-50  hover:-translate-y-1 hover:scale-110 duration-300"
               >
                 Load More
               </div>

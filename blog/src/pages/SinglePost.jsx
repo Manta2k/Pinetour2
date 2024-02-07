@@ -35,7 +35,19 @@ export default function SinglePost() {
               </div>
               <div>{article.profile_image_90}</div>
               <img src={article.cover_image} alt="" />
-              <div>{article.url}</div>
+              <div className="w-[70%] text-[20px]">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Impedit labore magni in molestiae explicabo! Esse veniam facere
+                sed, ea nam, recusandae aliquid maiores, tempora autem velit
+                accusamus laudantium voluptatibus quis. Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Doloribus, maiores tempore?
+                Cumque, nostrum voluptatem aliquam quis in voluptatum fugiat
+                eius laudantium similique incidunt repellat ipsum quae ducimus
+                saepe a unde. Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Dolore neque consequuntur magni accusamus saepe, non
+                perferendis, enim reprehenderit ea quis nemo provident dolores.
+                Tenetur est illo quaerat alias similique iusto?
+              </div>
             </div>
           )}
         </div>
