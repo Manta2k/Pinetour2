@@ -11,13 +11,13 @@ export const AllData = ({ children }) => {
   const fetchData = async () => {
     try {
       const topResponse = await fetch(
-        `https://dev.to/api/articles?page=1&per_page=4`
+        `https://dev.to/api/articles?page=6&per_page=4`
       );
       const trendingResponse = await fetch(
         `https://dev.to/api/articles?page=10&per_page=4`
       );
       const blogResponse = await fetch(
-        `https://dev.to/api/articles?page=27&per_page=${perPage}`
+        `https://dev.to/api/articles?page=5&per_page=${perPage}`
       );
 
       const topData = await topResponse.json();

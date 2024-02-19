@@ -5,7 +5,7 @@ export const BlogSection = () => {
   const { filteredArray } = useContext(AllDataContext);
   return filteredArray.map((el) => {
     return (
-      <div className=" flex flex-col w-[32%] border-solid border-[2px] border-gray-300 rounded-2xl p-[10px] mb-[2%]">
+      <div className=" flex flex-col w-[32%] border-solid border-[2px] border-gray-300 rounded-2xl p-[10px] mb-[2%] shadow-md hover:scale-[1.05] hover:ease-in-out duration-300">
         <img
           src={el.cover_image}
           className="w-[100%] h-[55%] rounded-2xl"

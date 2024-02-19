@@ -17,7 +17,7 @@ export default function PageNotFound() {
               are looking for.
             </div>
             <Link href="/">
-              <div className=" bg-indigo-600 text-white p-[10px] rounded-lg cursor-pointer">
+              <div className=" bg-indigo-600 text-white p-[10px] rounded-lg cursor-pointer w-fit">
                 Back to home
               </div>
             </Link>

@@ -3,7 +3,7 @@ import { AllData } from "@/context/firstContext";
 export default function App({ Component, pageProps }) {
   return (
     <AllData>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </AllData>
   );
 }

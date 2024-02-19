@@ -5,20 +5,12 @@ import Link from "next/link";
 export const BigContainer = () => {
   const { topArticles } = useContext(AllDataContext);
   return (
-    <div className="flex flex-col items-center w-full h-[700px] mt-[50px] gap-y-[15px]">
+    <div className="flex flex-col items-center w-full h-[700px] mt-[50px] gap-y-[15px] mb-[150px]">
       <div className="flex justify-center w-[70%] h-[100%] container">
         <div className="w-[100%] carousel ">
           {topArticles.map((el, i) => (
             <LoopImgBig key={i} {...el} />
           ))}
-        </div>
-      </div>
-      <div className="flex gap-x-[30px]">
-        <div className="flex justify-center items-center w-[50px] h-[50px] border-solid border-[1px] border-black rounded-lg hover:bg-slate-300">
-          <LeftSlide />
-        </div>
-        <div className="flex justify-center items-center w-[50px] h-[50px] border-solid border-[1px] border-black rounded-lg hover:bg-slate-300">
-          <RightSlide />
         </div>
       </div>
     </div>
@@ -34,10 +26,12 @@ export const LoopImgBig = ({
   return (
     <>
       <div
-        className="flex justify-start items-end w-[100%] h-[100%] rounded-2xl p-[20px] carousel-item "
-        style={{ backgroundImage: `url(${cover_image})` }}
+        className="flex justify-start items-end w-[100%] h-[100%] rounded-2xl carousel-item bg-cover"
+        style={{
+          backgroundImage: `url(${cover_image})`,
+        }}
       >
-        <div className="flex flex-col items-start h-[250px] w-[47%] bg-white rounded-2xl ml-[10px] mb-[10px]  p-[25px]">
+        <div className="flex flex-col items-start h-[30%] w-[47%] bg-white rounded-2xl ml-[25px] mb-[25px]  p-[25px]">
           <div className="flex justify-center items-center h-[35px] bg-indigo-700 rounded-lg text-white px-[10px]">
             {tag_list}
           </div>

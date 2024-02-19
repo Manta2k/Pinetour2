@@ -16,14 +16,14 @@ export const Allblog = () => {
       <div className=" flex flex-col items-center w-full mt-[100px] ">
         <div className=" flex flex-wrap gap-[2%] w-[70%] container">
           {filteredArray.map((el) => (
-            <div className=" flex flex-col w-[32%] border-solid border-[2px] border-gray-300 rounded-2xl p-[10px] mb-[2%]">
+            <div className=" flex flex-col w-[32%] border-solid border-[2px] border-gray-300 rounded-2xl p-[10px] mb-[2%] shadow-md hover:scale-[1.05] hover:ease-in-out duration-300">
               <img
                 src={el.cover_image}
                 className="w-[100%] h-[55%] rounded-2xl"
                 alt=""
               />
               <div className="flex flex-col w-[100%] h-[60%] mt-[5%] p-[10px] gap-y-[20px]">
-                <div className="h-[30px] rounded-lg bg-slate-200 text-indigo-600 p-[5px]">
+                <div className="h-[30px] rounded-lg bg-slate-200 text-indigo-600 p-[5px] w-fit">
                   {el.tags}
                 </div>
                 <Link href={{ pathname: "/SinglePost", query: { id: el.id } }}>

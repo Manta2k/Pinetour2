@@ -14,7 +14,7 @@ export const Header = () => {
         </Link>
         <div className="flex justify-center items-center gap-x-[45px] *:cursor-pointer">
           <Link href="/">
-            <div>Home</div>
+            <div className=" ">Home</div>
           </Link>
           <Link href="/Blog">
             <div>Blog</div>
