@@ -56,3 +56,14 @@ export default function SinglePost() {
     </>
   );
 }
+export async function getServerSideProps({ query }) {
+  const { slug } = query;
+  const res = await fetch(`https://dev.to/api/articles/${id}`);
+  const article = await res.json();
+
+  return {
+    props: {
+      article,
+    },
+  };
+}
