@@ -1,28 +1,7 @@
 import { Header } from "@/homePage/Header";
 import { Footer } from "@/homePage/Footer";
-import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
-export default function SinglePost() {
-  const router = useRouter();
-  const { id } = router.query;
 
-  const [article, setArticle] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const responsive = await fetch(`https://dev.to/api/articles/${id}`);
-        const data = await responsive.json();
-        setArticle(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    if (id) {
-      fetchData();
-    }
-  }, [id]);
+export default function SinglePost({ article }) {
   return (
     <>
       <div className="flex flex-col items-center w-full">
@@ -56,14 +35,25 @@ export default function SinglePost() {
     </>
   );
 }
-export async function getServerSideProps({ query }) {
-  const { slug } = query;
-  const res = await fetch(`https://dev.to/api/articles/${id}`);
+export async function getStaticProps({ params }) {
+  const { slug } = params;
+  const res = await fetch(`https://dev.to/api/articles/gereltuyamz/${slug}`);
   const article = await res.json();
 
   return {
     props: {
       article,
     },
+  };
+}
+
+export async function getStaticPaths() {
+  const res = await fetch(`https://dev.to/api/articles?username=gereltuyamz`);
+  const article = await res.json();
+  const slugs = article.map((article) => article.slug);
+  const paths = slugs.map((slug) => ({ params: { slug: slug.toString() } }));
+  return {
+    paths,
+    fallback: false,
   };
 }

@@ -14,7 +14,7 @@ export const AllData = ({ children }) => {
         `https://dev.to/api/articles?page=6&per_page=4`
       );
       const trendingResponse = await fetch(
-        `https://dev.to/api/articles?page=10&per_page=4`
+        `https://dev.to/api/articles?username=gereltuyamz`
       );
       const blogResponse = await fetch(
         `https://dev.to/api/articles?page=5&per_page=${perPage}`

@@ -26,7 +26,7 @@ export const Allblog = () => {
                 <div className="h-[30px] rounded-lg bg-slate-200 text-indigo-600 p-[5px] w-fit">
                   {el.tags}
                 </div>
-                <Link href={{ pathname: "/SinglePost", query: { id: el.id } }}>
+                <Link href={`/${el.slug}`}>
                   <div className="text-[25px] font-semibold cursor-pointer hover:text-blue-600">
                     {el.title}
                   </div>

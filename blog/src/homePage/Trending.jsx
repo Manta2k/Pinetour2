@@ -16,7 +16,7 @@ export const Trending = () => {
     </div>
   );
 };
-export const LoopTrend = ({ cover_image, description, tags, id }) => {
+export const LoopTrend = ({ cover_image, description, tags, slug }) => {
   return (
     <div
       className=" flex w-[25%] h-[80%] rounded-2xl  mt-[30px] p-[20px]"
@@ -26,7 +26,7 @@ export const LoopTrend = ({ cover_image, description, tags, id }) => {
         <div className="flex justify-center items-center h-[35px] bg-indigo-700 rounded-lg text-white px-[10px]">
           {tags}
         </div>
-        <Link href={{ pathname: "/SinglePost", query: { id } }}>
+        <Link href={`/${slug}`}>
           <div className="text-white font-semibold mt-[20px] cursor-pointer hover:text-indigo-500 backdrop-blur-md rounded-xl">
             {description}
           </div>
