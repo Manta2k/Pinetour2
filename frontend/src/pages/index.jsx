@@ -132,7 +132,7 @@ export default function Home() {
         </form>
       </div>
       <div className="flex justify-center mt-8 flex-wrap">
-        <div className="flex flex-col bg-slate-800 text-white w-[30%] p-8 gap-[15px] rounded-2xl">
+        <div className="flex flex-col bg-blue-500 text-white w-[30%] p-8 gap-[15px] rounded-2xl">
           <div className="flex *:text-center *:text-gray-400">
             <div className="w-[39%]">NAME</div>
             <div className="w-[39%]">AGE</div>
@@ -144,7 +144,7 @@ export default function Home() {
           {data.map((el, id) => (
             <div
               key={id}
-              className="flex justify-center *:hover:bg-slate-500 h-[50px]"
+              className="flex justify-center *:hover:bg-slate-300 h-[50px]"
             >
               <div className=" w-[40%] text-center">
                 <div>{el.name}</div>
